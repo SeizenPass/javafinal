@@ -16,7 +16,6 @@ public class UserDB {
     private UserDB() {}
 
     public static UserDB getInstance() {
-        users = new ArrayList<>();
         init();
         return userDB;
     }
@@ -25,20 +24,7 @@ public class UserDB {
         try {
             Statement s = cn.createStatement();
             ResultSet rs = s.executeQuery("SELECT * FROM users");
-            User user;
-            while(rs.next()) {
-                user = new User();
-                user.setId(rs.getInt(1));
-                user.setName(rs.getString(2));
-                user.setSurname(rs.getString(3));
-                user.setPriv_id(rs.getInt(4));
-                user.setMajor_id(rs.getInt(5));
-                user.setEmail(rs.getString(6));
-                user.setGroup_id(rs.getInt(7));
-                user.setGraduation_year(rs.getInt(8));
-                user.setPassword(rs.getString(9));
-                users.add(user);
-            }
+            users = getDBUsers(rs);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -100,23 +86,51 @@ public class UserDB {
     }
 
     public List<Club> getUserClubs(int id) {
-        List<Club> clubs = new ArrayList<>();
         try {
             PreparedStatement ps = cn.prepareStatement("SELECT * FROM clubs " +
                     "WHERE id = (SELECT club_id FROM club_membership WHERE user_id = ?)");
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
-            Club club;
+            return ClubDB.getDBClubs(rs);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public List<User> getUsersByClubId(int id) {
+        try {
+            PreparedStatement ps = cn.prepareStatement("SELECT * FROM users " +
+                    "WHERE id = (SELECT user_id FROM club_membership WHERE club_id = ?)");
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
+            return getDBUsers(rs);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    protected static List<User> getDBUsers(ResultSet rs) {
+        List<User> users = new ArrayList<>();
+        try {
+            User user;
             while (rs.next()) {
-                club = new Club();
-                club.setId(rs.getInt(1));
-                club.setClubName(rs.getString(2));
-                club.setDescription(rs.getString(3));
-                clubs.add(club);
+                user = new User();
+                user.setId(rs.getInt(1));
+                user.setName(rs.getString(2));
+                user.setSurname(rs.getString(3));
+                user.setPriv_id(rs.getInt(4));
+                user.setMajor_id(rs.getInt(5));
+                user.setEmail(rs.getString(6));
+                user.setGroup_id(rs.getInt(7));
+                user.setGraduation_year(rs.getInt(8));
+                user.setPassword(rs.getString(9));
+                users.add(user);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return clubs;
+        return users;
     }
 }

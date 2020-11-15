@@ -18,7 +18,6 @@ public class ClubDB {
     private ClubDB() {}
 
     public static ClubDB getInstance() {
-        clubs = new ArrayList<>();
         init();
         return clubDB;
     }
@@ -27,6 +26,19 @@ public class ClubDB {
         try {
             Statement s = cn.createStatement();
             ResultSet rs = s.executeQuery("SELECT * FROM clubs");
+            clubs = getDBClubs(rs);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public List<Club> getAllClubs() {
+        return clubs;
+    }
+
+    protected static List<Club> getDBClubs(ResultSet rs) {
+        List<Club> clubs = new ArrayList<>();
+        try {
             Club club;
             while(rs.next()) {
                 club = new Club();
@@ -38,9 +50,6 @@ public class ClubDB {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    }
-
-    public List<Club> getAllClubs() {
         return clubs;
     }
 }

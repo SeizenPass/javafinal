@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="demo1:war" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
@@ -22,9 +27,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19625e71-1bc3-4f80-9742-069a0fd1a79b" name="Default Changelist" comment="">
+    <list default="true" id="19625e71-1bc3-4f80-9742-069a0fd1a79b" name="Default Changelist" comment="modified: UserResource - getUserById and getAllUsers">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/demo1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myslanty/db/ClubDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myslanty/db/ClubDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myslanty/db/UserDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myslanty/db/UserDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myslanty/services/UserResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myslanty/services/UserResource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +45,13 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -217,8 +231,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605447847180</updated>
-      <workItem from="1605447850765" duration="201000" />
+      <workItem from="1605447850765" duration="1390000" />
     </task>
+    <task id="LOCAL-00001" summary="modified: UserResource - getUserById and getAllUsers">
+      <created>1605448355561</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1605448355561</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,6 +258,10 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="modified: UserResource - getUserById and getAllUsers" />
+    <option name="LAST_COMMIT_MESSAGE" value="modified: UserResource - getUserById and getAllUsers" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="548" y="302" key="#TomEE_Server" timestamp="1605447953812">
       <screen x="0" y="0" width="1536" height="824" />
@@ -249,9 +275,57 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1605447796059" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1605447628343">
+    <state width="1024" height="164" key="GridCell.Tab.0.bottom" timestamp="1605448240467">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605447628343" />
+    <state width="1024" height="164" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605448240467" />
+    <state width="1024" height="164" key="GridCell.Tab.0.center" timestamp="1605448240467">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="164" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605448240467" />
+    <state width="1024" height="164" key="GridCell.Tab.0.left" timestamp="1605448240467">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="164" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605448240467" />
+    <state width="1024" height="164" key="GridCell.Tab.0.right" timestamp="1605448240467">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="164" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605448240467" />
+    <state width="1024" height="164" key="GridCell.Tab.1.bottom" timestamp="1605448232997">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="164" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605448232997" />
+    <state width="1024" height="164" key="GridCell.Tab.1.center" timestamp="1605448232997">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="164" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1605448232997" />
+    <state width="1024" height="164" key="GridCell.Tab.1.left" timestamp="1605448232996">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="164" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1605448232996" />
+    <state width="1024" height="164" key="GridCell.Tab.1.right" timestamp="1605448232997">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="164" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1605448232997" />
+    <state width="1024" height="164" key="GridCell.Tab.2.bottom" timestamp="1605448232998">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="164" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605448232998" />
+    <state width="1024" height="164" key="GridCell.Tab.2.center" timestamp="1605448232998">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="164" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1605448232998" />
+    <state width="1024" height="164" key="GridCell.Tab.2.left" timestamp="1605448232997">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="164" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1605448232997" />
+    <state width="1024" height="164" key="GridCell.Tab.2.right" timestamp="1605448232998">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="164" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1605448232998" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1605448362589">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605448362589" />
   </component>
 </project>
