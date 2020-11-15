@@ -18,11 +18,11 @@
 * **[PUT]** clubs/{id}/subscription/{userid} - changePrivilege
 
 ### news-resource
-* **[GET]** news/{id} - getClubNewById
-* **[DELETE]** news/{id} - deleteNew
-* **[POST]** news/ - addNew
+* **[GET]** news/{id} - getNewsById
+* **[DELETE]** news/{id} - deleteNews
+* **[POST]** news/ - addNews
 * **[GET]** news/getAll - getAllNews
-* **[PUT]** news/{id} - updateNewById
+* **[PUT]** news/{id} - updateNewsById
 * **[GET]** news/club/{id} - getClubNewsByClubId
 
 ### event-resource
