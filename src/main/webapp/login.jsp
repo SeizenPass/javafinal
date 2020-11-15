@@ -22,13 +22,15 @@
             email = $("#email").val();
             password = $("#password").val();
             console.log(email + " " + password);
-            $.ajax({
-                url: '',
-                type: 'POST',
-                data: {
-                    "email" : email,
+            var log = {
+                "email" : email,
                     "password" : password
-                },
+            }
+            $.ajax({
+                url: 'api/auth',
+                type: 'POST',
+                data: JSON.stringify(log),
+                contentType: "application/json",
                 accepts: "application/json; charset=utf-8",
                 success:
                     function() {
@@ -45,7 +47,7 @@
         });
     </script>
     <div class="jumbotron">
-        <h1 class="display-4">Login</h1>
+        <h1 class="display-4">Login Form</h1>
         <form method="post">
             <div class="form-group">
                 <label for="email">Email:</label><br>
@@ -58,7 +60,6 @@
             <input type="submit" class="btn btn-primary" id="btn" value="Log In">
         </form>
     </div>
-
 </div>
 </body>
 </html>
