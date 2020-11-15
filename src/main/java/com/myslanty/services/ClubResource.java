@@ -16,6 +16,7 @@ public class ClubResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Club getClubById(@PathParam("id") int id) {
+        //TODO implement
         Club club = new Club();
         club.setId(id);
         return club;
@@ -25,6 +26,7 @@ public class ClubResource {
     @DELETE
     @Produces(MediaType.APPLICATION_JSON)
     public String deleteClub(@PathParam("id") int id) {
+        //TODO implement
         JsonObject json = new JsonObject();
         json.addProperty("status", "success");
         return new Gson().toJson(json);
@@ -33,6 +35,7 @@ public class ClubResource {
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     public String addClub(Club club) {
+        //TODO implement
         JsonObject json = new JsonObject();
         json.addProperty("status", "success");
         return new Gson().toJson(json);
@@ -42,6 +45,7 @@ public class ClubResource {
     @Path("getAll")
     @Produces(MediaType.APPLICATION_JSON)
     public List<Club> getAllClubs() {
+        //TODO implement
         List<Club> list = new ArrayList<>();
         Club club = new Club();
         club.setId(1);
@@ -52,4 +56,38 @@ public class ClubResource {
         return list;
     }
 
+    @PUT
+    public String updateClub(Club club) {
+        //TODO implement
+        JsonObject json = new JsonObject();
+        json.addProperty("status", "success");
+        return new Gson().toJson(json);
+    }
+
+    @POST
+    @Path("{id}/subscription/{userid}")
+    public String addSubscriberToClub(@PathParam("id") int id, @PathParam("userid") int userId) {
+        //TODO implement
+        JsonObject json = new JsonObject();
+        json.addProperty("status", "success");
+        return new Gson().toJson(json);
+    }
+
+    @DELETE
+    @Path("{id}/subscription/{userid}")
+    public String deleteSubscriber(@PathParam("id") int id, @PathParam("userid")int userId) {
+        //TODO implement
+        JsonObject json = new JsonObject();
+        json.addProperty("status", "success");
+        return new Gson().toJson(json);
+    }
+
+    @PUT
+    @Path("{id}/subscription/{userid}")
+    public String changePrivilege(@PathParam("id") int id, @PathParam("userid")int userId) {
+        //TODO implement
+        JsonObject json = new JsonObject();
+        json.addProperty("status", "success");
+        return new Gson().toJson(json);
+    }
 }

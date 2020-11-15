@@ -2,7 +2,7 @@ package com.myslanty.models;
 
 import java.sql.Timestamp;
 
-public class New {
+public class News {
     private int id, clubId;
     private String title, content;
 
