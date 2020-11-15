@@ -2,6 +2,7 @@ package com.myslanty.services;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
+import com.myslanty.db.UserDB;
 import com.myslanty.models.Club;
 import com.myslanty.models.User;
 
@@ -17,29 +18,14 @@ public class UserResource {
     @Produces(MediaType.APPLICATION_JSON)
     public User getUserById(@PathParam("id") int id) {
         //TODO connect to database and fetch user
-        User u = new User();
-        u.setName("Amiran");
-        u.setSurname("Kurman");
-        u.setId(id);
-        return u;
+        return UserDB.getInstance().getUserById(id);
     }
     @GET
     @Path("getAll")
     @Produces(MediaType.APPLICATION_JSON)
     public List<User> getAllUsers() {
         //TODO connect to database and fetch users
-        ArrayList<User> list = new ArrayList<>();
-        User u = new User();
-        u.setName("Amiran");
-        u.setSurname("Kurman");
-        u.setId(1);
-        list.add(u);
-        u = new User();
-        u.setName("Amiran2");
-        u.setSurname("Kurman2");
-        u.setId(2);
-        list.add(u);
-        return list;
+        return UserDB.getInstance().getAllUsers();
     }
     @POST
     @Produces(MediaType.APPLICATION_JSON)
