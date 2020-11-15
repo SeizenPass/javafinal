@@ -8,7 +8,7 @@
 * **[GET]** users/club/{id} - getUsersByClubId
 
 ### club-resource
-* **[GET]** clubs/{id} - getClubDataById
+* **[GET]** clubs/{id} - getClubById
 * **[DELETE]** clubs/{id} - deleteClub
 * **[POST]** clubs/ - addClub
 * **[GET]** clubs/getAll - getAllClubs
