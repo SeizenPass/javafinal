@@ -42,6 +42,13 @@ public class AuthResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public String logout(@Context HttpServletRequest request) {
-        return "Test";
+        request.getSession().removeAttribute("user");
+        JsonObject data = new JsonObject();
+        if (request.getSession().getAttribute("user") == null) {
+            data.addProperty("status", "success");
+        } else {
+            data.addProperty("status", "fail");
+        }
+        return new Gson().toJson(data);
     }
 }
