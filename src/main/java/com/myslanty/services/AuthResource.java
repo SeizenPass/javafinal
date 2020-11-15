@@ -8,6 +8,7 @@ import com.myslanty.db.UserDB;
 import com.myslanty.models.User;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.websocket.Session;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
@@ -42,13 +43,9 @@ public class AuthResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public String logout(@Context HttpServletRequest request) {
-        request.getSession().removeAttribute("user");
+        request.getSession().invalidate();
         JsonObject data = new JsonObject();
-        if (request.getSession().getAttribute("user") == null) {
-            data.addProperty("status", "success");
-        } else {
-            data.addProperty("status", "fail");
-        }
+        data.addProperty("status", "success");
         return new Gson().toJson(data);
     }
 }
