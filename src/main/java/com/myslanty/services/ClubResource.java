@@ -52,4 +52,34 @@ public class ClubResource {
         return list;
     }
 
+    @PUT
+    public String updateClub(Club club) {
+        JsonObject json = new JsonObject();
+        json.addProperty("status", "success");
+        return new Gson().toJson(json);
+    }
+
+    @POST
+    @Path("{id}/subscription/{userid}")
+    public String addSubscriberToClub(@PathParam("id") int id, @PathParam("userid") int userId) {
+        JsonObject json = new JsonObject();
+        json.addProperty("status", "success");
+        return new Gson().toJson(json);
+    }
+
+    @DELETE
+    @Path("{id}/subscription/{userid}")
+    public String deleteSubscriber(@PathParam("id") int id, @PathParam("userid")int userId) {
+        JsonObject json = new JsonObject();
+        json.addProperty("status", "success");
+        return new Gson().toJson(json);
+    }
+
+    @PUT
+    @Path("{id}/subscription/{userid}")
+    public String changePrivilege(@PathParam("id") int id, @PathParam("userid")int userId) {
+        JsonObject json = new JsonObject();
+        json.addProperty("status", "success");
+        return new Gson().toJson(json);
+    }
 }

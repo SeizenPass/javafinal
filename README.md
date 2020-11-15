@@ -12,10 +12,10 @@
 * **[DELETE]** clubs/{id} - deleteClub
 * **[POST]** clubs/ - addClub
 * **[GET]** clubs/getAll - getAllClubs
-* **[PUT]** clubs/{id} - updateClubById
-* **[POST]** clubs/{id}/subscription/{id} - addSubscriberToClub
-* **[DELETE]** clubs/{id}/subscription/{id} - deleteSubscriber
-* **[PUT]** clubs/{id}/subscription/{id} - changePrivilege
+* **[PUT]** clubs/ - updateClub
+* **[POST]** clubs/{id}/subscription/{userid} - addSubscriberToClub
+* **[DELETE]** clubs/{id}/subscription/{userid} - deleteSubscriber
+* **[PUT]** clubs/{id}/subscription/{userid} - changePrivilege
 
 ### news-resource
 * **[GET]** news/{id} - getClubNewById
