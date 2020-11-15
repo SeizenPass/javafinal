@@ -8,30 +8,12 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="19625e71-1bc3-4f80-9742-069a0fd1a79b" name="Default Changelist" comment="modified: UserResource REST API is ready">
+    <list default="true" id="273db7c4-baa5-439a-95dc-d64214999146" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/myslanty/db/ClubDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myslanty/db/ClubDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/myslanty/db/UserDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myslanty/db/UserDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/myslanty/services/UserResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myslanty/services/UserResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myslanty/services/AuthResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myslanty/services/AuthResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,12 +21,14 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
     </option>
+  </component>
+  <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LogFilters">
@@ -57,100 +41,41 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.3\plugins\maven\lib\maven3" />
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.1\plugins\maven\lib\maven3" />
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="1kKSZgoH3dcoZiFM4ATIErJ6fKP" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="1kKRmBSSXlIMu9uHlgsiYWhcumK" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../assignment8" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 9.0.37" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.37" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8" nameIsGenerated="true">
-      <option name="UPDATING_POLICY" value="restart-server" />
-      <deployment />
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Tomcat_9_0_37_demo1" />
-      </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="54616" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="demo1:war" />
-        </option>
       </method>
     </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.39" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration name="Tomcat 9" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8.0_231" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/demo1_war/" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -161,7 +86,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="_demo1" />
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_demo1_2" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -169,7 +94,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="55773" />
+        <option name="DEBUG_PORT" value="56278" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -227,26 +152,26 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="19625e71-1bc3-4f80-9742-069a0fd1a79b" name="Default Changelist" comment="" />
-      <created>1605447847180</created>
+      <changelist id="273db7c4-baa5-439a-95dc-d64214999146" name="Default Changelist" comment="" />
+      <created>1605447453184</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1605447847180</updated>
-      <workItem from="1605447850765" duration="2935000" />
+      <updated>1605447453184</updated>
+      <workItem from="1605447454252" duration="7203000" />
     </task>
-    <task id="LOCAL-00001" summary="modified: UserResource - getUserById and getAllUsers">
-      <created>1605448355561</created>
+    <task id="LOCAL-00001" summary="some commit2">
+      <created>1605447570318</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1605448355561</updated>
+      <updated>1605447570318</updated>
     </task>
-    <task id="LOCAL-00002" summary="modified: UserResource REST API is ready">
-      <created>1605449525616</created>
+    <task id="LOCAL-00002" summary="added: Auth, Club, User apies">
+      <created>1605452077043</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1605449525616</updated>
+      <updated>1605452077043</updated>
     </task>
     <option name="localTasksCounter" value="3" />
     <servers />
@@ -254,112 +179,95 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="modified: UserResource - getUserById and getAllUsers" />
-    <MESSAGE value="modified: UserResource REST API is ready" />
-    <option name="LAST_COMMIT_MESSAGE" value="modified: UserResource REST API is ready" />
+    <MESSAGE value="some commit2" />
+    <MESSAGE value="added: Auth, Club, User apies" />
+    <option name="LAST_COMMIT_MESSAGE" value="added: Auth, Club, User apies" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="548" y="302" key="#TomEE_Server" timestamp="1605447953812">
+    <state x="223" y="67" width="1089" height="751" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605450347735">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="548" y="302" key="#TomEE_Server/0.0.1536.824@0.0.1536.824" timestamp="1605447953812" />
-    <state x="223" y="63" width="1089" height="761" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605450620376">
+    <state x="223" y="67" width="1089" height="751" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1605450347735" />
+    <state x="327" y="0" key="CommitChangelistDialog2" timestamp="1605452076419">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="63" width="1089" height="761" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1605450620376" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1605447796059">
+    <state x="327" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1605452076419" />
+    <state x="81" y="65" key="DiffContextDialog" timestamp="1605452032967">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1605447796059" />
-    <state width="1024" height="210" key="GridCell.Tab.0.bottom" timestamp="1605450620426">
-    <state width="1024" height="164" key="GridCell.Tab.0.bottom" timestamp="1605450083414">
+    <state x="81" y="65" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1605452032967" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1605453245998">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605450620426" />
-    <state width="1024" height="210" key="GridCell.Tab.0.center" timestamp="1605450620426">
-    <state width="1024" height="164" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605450083414" />
-    <state width="1024" height="164" key="GridCell.Tab.0.center" timestamp="1605450083414">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1605453245998" />
+    <state width="1024" height="210" key="GridCell.Tab.0.bottom" timestamp="1605454388329">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605450620426" />
-    <state width="1024" height="210" key="GridCell.Tab.0.left" timestamp="1605450620425">
-    <state width="1024" height="164" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605450083414" />
-    <state width="1024" height="164" key="GridCell.Tab.0.left" timestamp="1605450083414">
+    <state width="1024" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605454388329" />
+    <state width="1024" height="210" key="GridCell.Tab.0.center" timestamp="1605454388329">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605450620425" />
-    <state width="1024" height="210" key="GridCell.Tab.0.right" timestamp="1605450620426">
-    <state width="1024" height="164" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605450083414" />
-    <state width="1024" height="164" key="GridCell.Tab.0.right" timestamp="1605450083414">
+    <state width="1024" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605454388329" />
+    <state width="1024" height="210" key="GridCell.Tab.0.left" timestamp="1605454388329">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605450620426" />
-    <state width="1024" height="210" key="GridCell.Tab.1.bottom" timestamp="1605450620426">
-    <state width="1024" height="164" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605450083414" />
-    <state width="1024" height="164" key="GridCell.Tab.1.bottom" timestamp="1605449949259">
+    <state width="1024" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605454388329" />
+    <state width="1024" height="210" key="GridCell.Tab.0.right" timestamp="1605454388329">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="164" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605449949259" />
-    <state width="1024" height="164" key="GridCell.Tab.1.center" timestamp="1605449949259">
-    <state width="1024" height="210" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605450620426" />
-    <state width="1024" height="210" key="GridCell.Tab.1.center" timestamp="1605450620426">
+    <state width="1024" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605454388329" />
+    <state width="1024" height="210" key="GridCell.Tab.1.bottom" timestamp="1605454384320">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="164" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1605449949259" />
-    <state width="1024" height="164" key="GridCell.Tab.1.left" timestamp="1605449949258">
-    <state width="1024" height="210" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1605450620426" />
-    <state width="1024" height="210" key="GridCell.Tab.1.left" timestamp="1605450620426">
+    <state width="1024" height="210" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605454384320" />
+    <state width="1024" height="210" key="GridCell.Tab.1.center" timestamp="1605454384319">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="164" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1605449949258" />
-    <state width="1024" height="164" key="GridCell.Tab.1.right" timestamp="1605449949259">
-    <state width="1024" height="210" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1605450620426" />
-    <state width="1024" height="210" key="GridCell.Tab.1.right" timestamp="1605450620426">
+    <state width="1024" height="210" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1605454384319" />
+    <state width="1024" height="210" key="GridCell.Tab.1.left" timestamp="1605454384318">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="164" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1605449949259" />
-    <state width="1024" height="164" key="GridCell.Tab.2.bottom" timestamp="1605449949259">
-    <state width="1024" height="210" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1605450620426" />
-    <state width="1024" height="210" key="GridCell.Tab.2.bottom" timestamp="1605450620427">
+    <state width="1024" height="210" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1605454384318" />
+    <state width="1024" height="210" key="GridCell.Tab.1.right" timestamp="1605454384319">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="164" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605449949259" />
-    <state width="1024" height="164" key="GridCell.Tab.2.center" timestamp="1605449949259">
-    <state width="1024" height="210" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605450620427" />
-    <state width="1024" height="210" key="GridCell.Tab.2.center" timestamp="1605450620426">
+    <state width="1024" height="210" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1605454384319" />
+    <state width="1024" height="210" key="GridCell.Tab.2.bottom" timestamp="1605454283893">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="210" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1605450620426" />
-    <state width="1024" height="210" key="GridCell.Tab.2.left" timestamp="1605450620426">
-    <state width="1024" height="164" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1605449949259" />
-    <state width="1024" height="164" key="GridCell.Tab.2.left" timestamp="1605449949259">
+    <state width="1024" height="210" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605454283893" />
+    <state width="1024" height="210" key="GridCell.Tab.2.center" timestamp="1605454283893">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="210" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1605450620426" />
-    <state width="1024" height="210" key="GridCell.Tab.2.right" timestamp="1605450620426">
-    <state width="1024" height="164" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1605449949259" />
-    <state width="1024" height="164" key="GridCell.Tab.2.right" timestamp="1605449949259">
+    <state width="1024" height="210" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1605454283893" />
+    <state width="1024" height="210" key="GridCell.Tab.2.left" timestamp="1605454283893">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="210" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1605450620426" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1605448362589">
-    <state width="1024" height="164" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1605449949259" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1605449533243">
+    <state width="1024" height="210" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1605454283893" />
+    <state width="1024" height="210" key="GridCell.Tab.2.right" timestamp="1605454283893">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605449533243" />
+    <state width="1024" height="210" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1605454283893" />
+    <state x="147" y="65" key="MergeDialog" timestamp="1605452625866">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="147" y="65" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1605452625866" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1605454309908">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1605454309908" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1605452078453">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605452078453" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605452621395">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1605452621395" />
+    <state x="478" y="145" width="579" height="534" key="find.popup" timestamp="1605451292621">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="478" y="145" width="579" height="534" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1605451292621" />
   </component>
 </project>

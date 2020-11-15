@@ -13,7 +13,6 @@ import javax.ws.rs.core.MediaType;
 @Path("auth")
 public class AuthResource {
     @POST
-    @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public String login(String body, @Context HttpServletRequest request) {
         JsonObject json = new Gson().fromJson(body, JsonObject.class);
@@ -22,7 +21,7 @@ public class AuthResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public String logout() {
+    public String logout(@Context HttpServletRequest request) {
         return "Test";
     }
 }
