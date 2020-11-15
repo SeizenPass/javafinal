@@ -14,6 +14,9 @@
       <configuration>
         <setting name="validation-enabled" value="true" />
         <datasource-mapping />
+        <datasource-mapping>
+          <factory-entry name="demo1" />
+        </datasource-mapping>
         <naming-strategy-map />
       </configuration>
     </facet>
