@@ -7,5 +7,11 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/portal</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="portal@localhost" uuid="b2bab8ee-d851-4855-a719-683fd5545aca">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/portal</jdbc-url>
+    </data-source>
   </component>
 </project>
