@@ -30,7 +30,7 @@
                     contentType: "application/json",
                     success:
                         function (data) {
-                            alert(data.email)
+                            alert(data.status)
                         },
                     error:
                         function (response) {
