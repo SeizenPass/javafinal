@@ -16,7 +16,6 @@
 </head>
 <body class="container">
 <div class="form">
-    <h1>Login Form</h1>
     <script>
         $("#btn").click(function (){
             event.preventDefault();
@@ -45,17 +44,21 @@
             return false;
         });
     </script>
-    <form method="post">
-        <div class="form-group">
-            <label for="email">Email:</label><br>
-            <input type="text" name="username" class="form-control" id="email">
-        </div>
-        <div class="form-group">
-            <label for="password">Password:</label><br>
-            <input type="password" name="password" class="form-control" id="password">
-        </div>
-        <input type="submit" class="btn btn-primary" id="btn" value="Log In">
-    </form>
+    <div class="jumbotron">
+        <h1 class="display-4">Login</h1>
+        <form method="post">
+            <div class="form-group">
+                <label for="email">Email:</label><br>
+                <input type="text" name="username" class="form-control" id="email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label><br>
+                <input type="password" name="password" class="form-control" id="password">
+            </div>
+            <input type="submit" class="btn btn-primary" id="btn" value="Log In">
+        </form>
+    </div>
+
 </div>
 </body>
 </html>
