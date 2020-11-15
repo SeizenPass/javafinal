@@ -1,4 +1,4 @@
-package com.myslanty;
+package com.myslanty.db;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;

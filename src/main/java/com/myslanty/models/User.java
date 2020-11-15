@@ -1,8 +1,16 @@
-package com.myslanty;
+package com.myslanty.models;
 
 public class User {
-    private int id, priv_id, major_id, group_id;
+    private int id, priv_id, major_id, group_id, graduation_year;
     private String name, surname, email;
+
+    public int getGraduation_year() {
+        return graduation_year;
+    }
+
+    public void setGraduation_year(int graduation_year) {
+        this.graduation_year = graduation_year;
+    }
 
     public int getId() {
         return id;

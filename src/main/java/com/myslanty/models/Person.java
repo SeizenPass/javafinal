@@ -1,7 +1,14 @@
-package com.myslanty;
+package com.myslanty.models;
 
 import javax.json.bind.annotation.JsonbProperty;
 import javax.xml.bind.annotation.XmlRootElement;
+
+/**
+ * USED ONLY FOR TESTING
+ * NOT INCLUDED IN THE ACTUAL PROJECT
+ * FOR REFERENCE
+ */
+
 
 public class Person {
     public String name, surname;

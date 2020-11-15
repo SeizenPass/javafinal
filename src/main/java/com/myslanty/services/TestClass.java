@@ -1,17 +1,24 @@
-package com.myslanty;
+package com.myslanty.services;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import com.myslanty.models.Person;
+import com.myslanty.db.PortalRepository;
+import com.myslanty.models.User;
 
-import javax.json.Json;
-import javax.json.bind.annotation.JsonbProperty;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
-import javax.xml.transform.Result;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+
+
+/**
+ * USED ONLY FOR TESTING
+ * NOT INCLUDED IN THE ACTUAL PROJECT
+ * FOR REFERENCE
+ */
 
 @Path("amiran")
 public class TestClass {
@@ -57,7 +64,7 @@ public class TestClass {
     }
 
     @Path("jdbcTest")
-    @GET
+    @POST
     @Produces(MediaType.APPLICATION_JSON)
     public User getUser() {
         Connection con = PortalRepository.getInstance().getConnection();
