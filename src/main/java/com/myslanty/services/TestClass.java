@@ -15,7 +15,7 @@ import java.sql.Statement;
 
 
 /**
- * USED ONLY FOR TESTING
+ * USED ONLY FOR TESTINGgir
  * NOT INCLUDED IN THE ACTUAL PROJECT
  * FOR REFERENCE
  *
