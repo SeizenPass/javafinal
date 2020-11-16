@@ -35,6 +35,7 @@
     });
 </script>
 <body>
+
 <%
     User cur = (User)request.getSession().getAttribute("user");
 %>
