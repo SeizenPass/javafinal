@@ -9,9 +9,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Main</title>
     <%@include file="header.jsp"%>
 </head>
+
+<body>
+<%@include file="jumbotron.jsp"%>
 <script>
     $( document ).ready(function () {
         $("#butn").click(function () {
@@ -66,7 +69,7 @@
                                     $("#news").text("No news");
                                 }
                                 data3.forEach(function (news){
-                                    $("#ol3").append("<li>" + "<a href='new.jsp?id="+news.id+"'>" + news.title + "</a>" + "</li>");
+                                    $("#ol3").append("<li>" + "<a href='news.jsp?id="+news.id+"'>" + news.title + "</a>" + "</li>");
                                 })
                             }
                     });
@@ -76,22 +79,20 @@
         return false;
     });
 </script>
-<body>
-<%@include file="jumbotron.jsp"%>
 <div id="clubs">
     <h3>Clubs:</h3>
-    <ol id="ol">
-    </ol>
+    <ul id="ol">
+    </ul>
 </div>
 <div id="events">
     <h3>Events:</h3>
-    <ol id="ol2">
-    </ol>
+    <ul id="ol2">
+    </ul>
 </div>
 <div id="news">
     <h3>News:</h3>
-    <ol id="ol3">
-    </ol>
+    <ul id="ol3">
+    </ul>
 </div>
 </body>
 </html>
