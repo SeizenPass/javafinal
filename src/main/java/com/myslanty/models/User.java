@@ -2,7 +2,15 @@ package com.myslanty.models;
 
 public class User {
     private int id, priv_id, major_id, group_id, graduation_year;
-    private String name, surname, email;
+    private String name, surname, email, password;
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     public int getGraduation_year() {
         return graduation_year;
