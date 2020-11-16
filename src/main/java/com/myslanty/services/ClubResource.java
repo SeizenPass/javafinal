@@ -3,6 +3,7 @@ package com.myslanty.services;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.myslanty.db.ClubDB;
+import com.myslanty.db.ClubMembershipDB;
 import com.myslanty.db.UserDB;
 import com.myslanty.models.Club;
 
@@ -55,9 +56,9 @@ public class ClubResource {
     }
 
     @POST
-    @Path("{id}/subscription/{userid}")
-    public String addSubscriberToClub(@PathParam("id") int id, @PathParam("userid") int userId) {
-        //TODO implement
+    @Path("{id}/subscription/{userid}/{privid}")
+    public String addSubscriberToClub(@PathParam("id") int id, @PathParam("userid") int userId, @PathParam("privid") int privId) {
+        ClubMembershipDB.getInstance().addSubscriberToClub(userId, id, privId);
         JsonObject json = new JsonObject();
         json.addProperty("status", "success");
         return new Gson().toJson(json);
@@ -66,16 +67,16 @@ public class ClubResource {
     @DELETE
     @Path("{id}/subscription/{userid}")
     public String deleteSubscriber(@PathParam("id") int id, @PathParam("userid")int userId) {
-        //TODO implement
+        ClubMembershipDB.getInstance().deleteSubscriberFromClub(userId, id);
         JsonObject json = new JsonObject();
         json.addProperty("status", "success");
         return new Gson().toJson(json);
     }
 
     @PUT
-    @Path("{id}/subscription/{userid}")
-    public String changePrivilege(@PathParam("id") int id, @PathParam("userid")int userId) {
-        //TODO implement
+    @Path("{id}/subscription/{userid}/{privid}")
+    public String changePrivilege(@PathParam("id") int id, @PathParam("userid")int userId, @PathParam("privid") int privId) {
+        ClubMembershipDB.getInstance().changePrivilege(userId, id, privId);
         JsonObject json = new JsonObject();
         json.addProperty("status", "success");
         return new Gson().toJson(json);
