@@ -27,9 +27,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19625e71-1bc3-4f80-9742-069a0fd1a79b" name="Default Changelist" comment="added: ClubMembershipDB,&#10;updated: ClubResource is finished">
+    <list default="true" id="19625e71-1bc3-4f80-9742-069a0fd1a79b" name="Default Changelist" comment="fixed: club update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/myslanty/db/ClubDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myslanty/db/ClubDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myslanty/db/UserDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myslanty/db/UserDB.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,7 +255,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605447847180</updated>
       <workItem from="1605447850765" duration="4011000" />
-      <workItem from="1605496866855" duration="4027000" />
+      <workItem from="1605496866855" duration="4474000" />
     </task>
     <task id="LOCAL-00001" summary="modified: UserResource - getUserById and getAllUsers">
       <created>1605448355561</created>
@@ -285,7 +285,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605501373960</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fixed: club update">
+      <created>1605505183255</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1605505183255</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,9 +315,14 @@
     <MESSAGE value="modified: UserResource REST API is ready" />
     <MESSAGE value="added: ClubDB - CRUD for Clubs" />
     <MESSAGE value="added: ClubMembershipDB,&#10;updated: ClubResource is finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="added: ClubMembershipDB,&#10;updated: ClubResource is finished" />
+    <MESSAGE value="fixed: club update" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed: club update" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="206" y="254" key="#SQL_Dialects" timestamp="1605505611803">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="206" y="254" key="#SQL_Dialects/0.0.1536.824@0.0.1536.824" timestamp="1605505611803" />
     <state x="548" y="302" key="#TomEE_Server" timestamp="1605447953812">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -383,10 +395,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="147" y="65" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1605499515149" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1605501382704">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1605505190126">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605501382704" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605505190126" />
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605501746426">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
