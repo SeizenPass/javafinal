@@ -23,15 +23,15 @@
             success:
                 function (data) {
                     $.ajax({
-                        url: 'api/clubs/'+data.id,
+                        url: 'api/news/'+data.id,
                         type: 'GET',
                         contentType: "application/json",
                         success:
-                            function (data2) {
+                            function (data) {
                                 $("#testing").append(
                                     "<h2>" + data.title + "</h2>" +
                                     "<b>Content: </b>" + data.content +
-                                    "<br><b>Organiser:</b> " + data2.clubName +
+                                    "<br><b>Organiser:</b> " + data.clubName +
                                     "<br><b>Publish Date:</b> " + data.publishDate.substring(0,10)
                                 )
                             }
