@@ -2,6 +2,7 @@ package com.myslanty.services;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
+import com.myslanty.db.EventDB;
 import com.myslanty.models.Event;
 
 import javax.ws.rs.*;
@@ -15,26 +16,23 @@ public class EventResource {
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Event getClubEventById(@PathParam("id") int id) {
-        //TODO implement
-        Event event = new Event();
-        event.setId(id);
-        return event;
+        return EventDB.getInstance().getEventById(id);
     }
 
     @DELETE
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public String deleteEvent(@PathParam("id") int id) {
-        //TODO implement
+        EventDB.getInstance().deleteEvent(id);
         JsonObject json = new JsonObject();
-        json.addProperty("id", id);
+        json.addProperty("status", "success");
         return new Gson().toJson(json);
     }
 
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     public String addEvent(Event event) {
-        //TODO implement
+        EventDB.getInstance().addEvent(event);
         JsonObject json = new JsonObject();
         json.addProperty("status", "success");
         return new Gson().toJson(json);
@@ -44,24 +42,16 @@ public class EventResource {
     @Path("getAll")
     @Produces(MediaType.APPLICATION_JSON)
     public List<Event> getAllEvents() {
-        //TODO implement
-        List<Event> list = new ArrayList<>();
-        Event event = new Event();
-        event.setId(1);
-        list.add(event);
-        event = new Event();
-        event.setId(2);
-        list.add(event);
-        return list;
+        return EventDB.getInstance().getAllEvents();
     }
 
     @PUT
-    @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public String addEvent(@PathParam("id") int id) {
+    public String updateEvent(Event event) {
         //TODO implement
+        EventDB.getInstance().updateEvent(event);
         JsonObject json = new JsonObject();
-        json.addProperty("id", id);
+        json.addProperty("status", "success");
         return new Gson().toJson(json);
     }
 
@@ -69,16 +59,6 @@ public class EventResource {
     @Path("club/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public List<Event> getClubEventsByClubId(@PathParam("id") int id) {
-        //TODO implement
-        List<Event> list = new ArrayList<>();
-        Event event = new Event();
-        event.setId(1);
-        event.setClubId(id);
-        list.add(event);
-        event = new Event();
-        event.setId(2);
-        event.setClubId(id);
-        list.add(event);
-        return list;
+        return EventDB.getInstance().getClubEventsByClubId(id);
     }
 }

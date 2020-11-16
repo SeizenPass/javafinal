@@ -89,7 +89,39 @@ public class EventDB {
         }
     }
 
-    
+    public void updateEvent(Event event) {
+        for (Event e : events) {
+            if (e.getId() == event.getId()) {
+                e.setEventName(event.getEventName());
+                e.setDescription(event.getDescription());
+                e.setDate(event.getDate());
+                break;
+            }
+        }
+        try {
+            PreparedStatement ps = cn.prepareStatement("UPDATE events " +
+                    "SET event_name=?, description=?, date=? " +
+                    "WHERE id=?");
+            ps.setString(1, event.getEventName());
+            ps.setString(2, event.getDescription());
+            ps.setTimestamp(3, event.getDate());
+            ps.setInt(4, event.getId());
+            ps.executeUpdate();
+            ps.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public List<Event> getClubEventsByClubId(int id) {
+        List<Event> ans = new ArrayList<>();
+        for (Event e: events) {
+            if (e.getClubId() == id) {
+                ans.add(e);
+            }
+        }
+        return ans;
+    }
 
     protected static List<Event> getDBEvents(ResultSet rs) {
         List<Event> events = new ArrayList<>();
