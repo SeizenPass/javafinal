@@ -1,6 +1,7 @@
 package com.myslanty.db;
 
 import com.myslanty.models.Club;
+import com.myslanty.models.DictionaryContentPrivilege;
 import com.myslanty.models.DictionaryUserPrivilege;
 
 import java.sql.Connection;
@@ -48,5 +49,18 @@ public class DictionaryUserPrivilegeDB {
             e.printStackTrace();
         }
         return userPrivilegeMap;
+    }
+
+    public List<DictionaryUserPrivilege> getAllUserPrivileges() {
+        List<DictionaryUserPrivilege> list = new ArrayList<>();
+        for (Integer s:
+                userPrivilegeMap.keySet()) {
+            list.add(userPrivilegeMap.get(s));
+        }
+        return list;
+    }
+
+    public DictionaryUserPrivilege getUserPrivilegeById(int id) {
+        return userPrivilegeMap.get(id);
     }
 }
