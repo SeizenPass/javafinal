@@ -74,7 +74,7 @@ public class UserResource {
         return out;
     }
 
-    @GET
+    @POST
     @Path("find")
     @Consumes(MediaType.APPLICATION_JSON)
     public List<User> findUsers(User user) {
