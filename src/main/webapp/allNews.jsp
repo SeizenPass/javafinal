@@ -33,7 +33,6 @@
         return false;
     });
 </script>
-<body>
 <ul type="none" id="listOfEvents">
 </ul>
 </body>

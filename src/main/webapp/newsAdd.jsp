@@ -52,11 +52,11 @@
 <form method="post">
     <span class="error text-danger" id="errormsg" style="display: none"></span>
     <div class="form-group">
-        <label for="title">Event Name:</label><br>
+        <label for="title">News Name:</label><br>
         <input type="text" name="title" class="form-control" id="title">
     </div>
     <div class="form-group">
-        <label for="content">Event Description:</label><br>
+        <label for="content">News Description:</label><br>
         <textarea name="content" class="form-control" id="content"> </textarea>
     </div>
     <input type="button" class="btn btn-dark" id="btn" value="Add News">

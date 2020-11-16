@@ -34,6 +34,20 @@
                         "<b>Description: </b>" + data.description
                     )
                     $.ajax({
+                        url: 'api/events/club/'+data.id,
+                        type: 'GET',
+                        contentType: "application/json",
+                        success:
+                            function (data2) {
+                                if (data2.length === 0){
+                                    $("#testing1").text("No events");
+                                }
+                                data2.forEach(function (event){
+                                    $("#ol6").append("<li>" + "<a href='events.jsp?id="+event.id+"'>" + event.eventName + "</a>" + "</li>");
+                                })
+                            }
+                    });
+                    $.ajax({
                         url: 'api/news/club/'+data.id,
                         type: 'GET',
                         contentType: "application/json",
@@ -66,14 +80,19 @@
     });
 </script>
 <div id="testing"></div>
+<div id="testing1">
+    <ul id="ol6"></ul>
+</div>
 <div id="testing2">
     <ul id="ol5"></ul>
 </div>
 <div id="members">
     <ul id="ol4"></ul>
 </div>
-<a href="clubDelete.jsp?id=<%=request.getParameter("id")%>">Delete</a>
-<a href="clubUpdate.jsp?id=<%=request.getParameter("id")%>">Update Club</a>
-<a href="eventAdd.jsp?id=<%=request.getParameter("id")%>">Add Event</a>
+<a href="clubDelete.jsp?id=<%=request.getParameter("id")%>" class="btn btn-dark">Delete</a>
+<a href="clubUpdate.jsp?id=<%=request.getParameter("id")%>" class="btn btn-dark">Update Club</a>
+<a href="eventAdd.jsp?id=<%=request.getParameter("id")%>" class="btn btn-dark">Add Event</a>
+<a href="newsAdd.jsp?id=<%=request.getParameter("id")%>" class="btn btn-dark">Add News</a>
+<a href="join.jsp?id=<%=request.getParameter("id")%>" class="btn btn-dark">Join</a>
 </body>
 </html>
