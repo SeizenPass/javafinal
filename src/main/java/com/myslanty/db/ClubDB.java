@@ -80,7 +80,7 @@ public class ClubDB {
 
     public void updateClub(Club club) {
         for (Club c : clubs) {
-            if (c.getId() == c.getId()) {
+            if (c.getId() == club.getId()) {
                 c.setClubName(club.getClubName());
                 c.setDescription(club.getDescription());
                 break;
