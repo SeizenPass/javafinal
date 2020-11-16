@@ -1,6 +1,6 @@
 <%--
   Created by IntelliJ IDEA.
-  User: ASUS
+  User: Beibarys
   Date: 16.11.2020
   Time: 16:24
   To change this template use File | Settings | File Templates.
@@ -17,35 +17,44 @@
             eventName = $("#eventName").val();
             description = $("#description").val();
             date = $("#date").val();
-            var log = {
-                "id": 0,
-                "clubId": <%=request.getParameter("id")%>,
-                "eventName": eventName,
-                "description": description,
-                "publishDate": null,
-                "date": date
-            }
             $.ajax({
-                url: 'api/events/',
-                type: 'PUT',
-                data: JSON.stringify(log),
+                url: 'api/events/<%=request.getParameter("id")%>',
+                type: 'GET',
                 contentType: "application/json",
                 success:
                     function (data) {
-                        if (data.status === "success") {
-                            window.location.href = "events.jsp";
-                        } else {
-                            $("#errormsg").text('Error: Incorrect data - ' + data.status);
-                            $("#errormsg").show();
+                        var clubId = data.clubId;
+                        var log = {
+                            "id": <%=request.getParameter("id")%>,
+                            "clubId": clubId,
+                            "eventName": eventName,
+                            "description": description,
+                            "publishDate": null,
+                            "date": date
                         }
-                    },
-                fail:
-                    function (data) {
-                        $("#errormsg").text('Error: Incorrect data - ' + data.status);
-                        $("#errormsg").show();
+                        $.ajax({
+                            url: 'api/events/',
+                            type: 'PUT',
+                            data: JSON.stringify(log),
+                            contentType: "application/json",
+                            success:
+                                function (data) {
+                                    if (data.status === "success") {
+                                        window.location.href = "events.jsp";
+                                    } else {
+                                        $("#errormsg").text('Error: Incorrect data - ' + data.status);
+                                        $("#errormsg").show();
+                                    }
+                                },
+                            fail:
+                                function (data) {
+                                    $("#errormsg").text('Error: Incorrect data - ' + data.status);
+                                    $("#errormsg").show();
+                                }
+                        });
+                        return false;
                     }
             });
-            return false;
         });
     });
 </script>
@@ -65,7 +74,7 @@
             <label for="date">Date:</label><br>
             <input type="datetime-local" name="date" id="date">
         </div>
-        <input type="button" class="btn btn-dark" id="btn" value="Add Event">
+        <input type="button" class="btn btn-dark" id="btn" value="Update Event">
     </form>
 </body>
 </html>
