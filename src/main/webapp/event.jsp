@@ -41,5 +41,6 @@
 <body>
     <%@include file="jumbotron.jsp"%>
     <ul type="none" id="eventInfo"></ul>
+    <a href="eventUpdate.jsp?id=<%=request.getParameter("id")%>">Update</a>
 </body>
 </html>
