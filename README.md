@@ -13,9 +13,9 @@
 * **[POST]** clubs/ - addClub
 * **[GET]** clubs/getAll - getAllClubs
 * **[PUT]** clubs/ - updateClub
-* **[POST]** clubs/{id}/subscription/{userid} - addSubscriberToClub
+* **[POST]** clubs/{id}/subscription/{userid}/{privid} - addSubscriberToClub
 * **[DELETE]** clubs/{id}/subscription/{userid} - deleteSubscriber
-* **[PUT]** clubs/{id}/subscription/{userid} - changePrivilege
+* **[PUT]** clubs/{id}/subscription/{userid}/{privid} - changePrivilege
 
 ### news-resource
 * **[GET]** news/{id} - getNewsById
