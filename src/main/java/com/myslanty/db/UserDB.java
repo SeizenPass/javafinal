@@ -106,12 +106,7 @@ public class UserDB {
                     "WHERE id IN (SELECT user_id FROM clubs_membership WHERE club_id = ?)");
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
-            List<User> userList = getDBUsers(rs);
-            for (User s:
-                 userList) {
-                s = s.copyWithoutPassword();
-            }
-            return userList;
+            return getDBUsers(rs);
         } catch (SQLException e) {
             e.printStackTrace();
         }

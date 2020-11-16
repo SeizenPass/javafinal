@@ -26,11 +26,12 @@ public class UserResource {
     @Produces(MediaType.APPLICATION_JSON)
     public List<User> getAllUsers() {
         List<User> userList = UserDB.getInstance().getAllUsers();
+        List<User> out = new ArrayList<>();
         for (User s:
              userList) {
-            s = s.copyWithoutPassword();
+            out.add(s.copyWithoutPassword());
         }
-        return userList;
+        return out;
     }
 
     @POST
@@ -64,11 +65,17 @@ public class UserResource {
     @Path("club/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public List<User> getUsersByClubId(@PathParam("id") int id) {
-        return UserDB.getInstance().getUsersByClubId(id);
+        List<User> userList = UserDB.getInstance().getUsersByClubId(id);
+        for (User s:
+                userList) {
+            s = s.copyWithoutPassword();
+        }
+        return userList;
     }
 
     @GET
     @Path("find")
+    @Consumes(MediaType.APPLICATION_JSON)
     public List<User> findUsers(User user) {
         return UserDB.getInstance().findUsers(user);
     }
