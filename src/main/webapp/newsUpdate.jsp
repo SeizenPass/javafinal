@@ -13,47 +13,50 @@
 </head>
 <script>
     $( document ).ready(function () {
+        var clubId
+        $.ajax({
+            url: 'api/news/<%=request.getParameter("id")%>',
+            type: 'GET',
+            contentType: "application/json",
+            success:
+                function (data) {
+                    $("#title").val(data.title);
+                    $("#content").val(data.content);
+                    clubId = data.clubId
+                }
+        });
         $("#btn").click(function () {
             title = $("#title").val();
             content = $("#content").val();
+            var log = {
+                "id": <%=request.getParameter("id")%>,
+                "clubId": clubId,
+                "title": title,
+                "content": content,
+                "publishDate": null,
+            }
             $.ajax({
-                url: 'api/news/<%=request.getParameter("id")%>',
-                type: 'GET',
+                url: 'api/news/',
+                type: 'PUT',
+                data: JSON.stringify(log),
                 contentType: "application/json",
                 success:
                     function (data) {
-                        var clubId = data.clubId;
-                        var log = {
-                            "id": <%=request.getParameter("id")%>,
-                            "clubId": clubId,
-                            "title": title,
-                            "content": content,
-                            "publishDate": null,
+                        if (data.status === "success") {
+                            window.location.href = "allNews.jsp";
+                        } else {
+                            $("#errormsg").text('Error: Incorrect data - ' + data.status);
+                            $("#errormsg").show();
                         }
-                        $.ajax({
-                            url: 'api/news/',
-                            type: 'PUT',
-                            data: JSON.stringify(log),
-                            contentType: "application/json",
-                            success:
-                                function (data) {
-                                    if (data.status === "success") {
-                                        window.location.href = "allNews.jsp";
-                                    } else {
-                                        $("#errormsg").text('Error: Incorrect data - ' + data.status);
-                                        $("#errormsg").show();
-                                    }
-                                },
-                            fail:
-                                function (data) {
-                                    $("#errormsg").text('Error: Incorrect data - ' + data.status);
-                                    $("#errormsg").show();
-                                }
-                        });
-                        return false;
+                    },
+                fail:
+                    function (data) {
+                        $("#errormsg").text('Error: Incorrect data - ' + data.status);
+                        $("#errormsg").show();
                     }
             });
-        });
+
+            });
     });
 </script>
 <body>

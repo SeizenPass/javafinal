@@ -30,7 +30,7 @@
                                     $("#eventInfo").append(
                                         "<li><div><h2>" + data.eventName + "</h2>" +
                                         "<b>Description: </b>" + data.description +
-                                        "<br><b>Organiser:</b> " + data2.clubName +
+                                        "<br><b>Organiser:</b> " +'<a href="club.jsp?id='+data2.id+'">'+ data2.clubName + '</a>' +
                                         "<br><b>Date:</b> " + data.date.substring(0,10)+ "</div><hr></li>"
                                     )
                                 }

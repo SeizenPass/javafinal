@@ -104,4 +104,14 @@ public class ClubMembershipDB {
         }
         return clubMemberships;
     }
+
+    public int getPrivIdByUserAndClubId(int userId, int clubId) {
+        for (ClubMembership cb:
+             clubMemberships) {
+            if (cb.getUserId() == userId && clubId == cb.getClubId()) {
+                return cb.getPrivId();
+            }
+        }
+        return 0;
+    }
 }

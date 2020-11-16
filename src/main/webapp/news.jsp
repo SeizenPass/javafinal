@@ -11,6 +11,8 @@
     <title>News</title>
     <%@include file="header.jsp"%>
 </head>
+<body>
+<%@include file="jumbotron.jsp"%>
 <script>
     $( document ).ready(function () {
         $.ajax({
@@ -28,7 +30,7 @@
                                 $("#testing").append(
                                     "<h2>" + data.title + "</h2>" +
                                     "<b>Content: </b>" + data.content +
-                                    "<br><b>Organiser:</b> " + data2.clubName +
+                                    "<br><b>Organiser:</b> " +'<a href="club.jsp?id='+data2.id+'">'+ data2.clubName + '</a>' +
                                     "<br><b>Publish Date:</b> " + data.publishDate.substring(0,10)
                                 )
                             }
@@ -38,8 +40,6 @@
         });
     });
 </script>
-<body>
-<%@include file="jumbotron.jsp"%>
 <div id="testing"></div>
 <a href="newsUpdate.jsp?id=<%=request.getParameter("id")%>">Update</a>
 <a href="newsDelete.jsp?id=<%=request.getParameter("id")%>">Delete</a>
