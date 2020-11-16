@@ -15,48 +15,53 @@
     <%@include file="jumbotron.jsp"%>
     <script>
         $( document ).ready(function () {
+            var clubId
+            $.ajax({
+                url: 'api/events/<%=request.getParameter("id")%>',
+                type: 'GET',
+                contentType: "application/json",
+                success:
+                    function (data) {
+                        $("#eventName").val(data.eventName)
+                        $("#description").val(data.description)
+                        var t = data.date.substr(0, 16)
+                        $("#date").val(t);
+                        clubId = data.clubId
+                    }
+            });
             $("#btn").click(function () {
                 eventName = $("#eventName").val();
                 description = $("#description").val();
                 date = $("#date").val();
+                var log = {
+                    "id": <%=request.getParameter("id")%>,
+                    "clubId": clubId,
+                    "eventName": eventName,
+                    "description": description,
+                    "publishDate": null,
+                    "date": date
+                }
                 $.ajax({
-                    url: 'api/events/<%=request.getParameter("id")%>',
-                    type: 'GET',
+                    url: 'api/events/',
+                    type: 'PUT',
+                    data: JSON.stringify(log),
                     contentType: "application/json",
                     success:
                         function (data) {
-                            var clubId = data.clubId;
-                            var log = {
-                                "id": <%=request.getParameter("id")%>,
-                                "clubId": clubId,
-                                "eventName": eventName,
-                                "description": description,
-                                "publishDate": null,
-                                "date": date
+                            if (data.status === "success") {
+                                window.location.href = "events.jsp";
+                            } else {
+                                $("#errormsg").text('Error: Incorrect data - ' + data.status);
+                                $("#errormsg").show();
                             }
-                            $.ajax({
-                                url: 'api/events/',
-                                type: 'PUT',
-                                data: JSON.stringify(log),
-                                contentType: "application/json",
-                                success:
-                                    function (data) {
-                                        if (data.status === "success") {
-                                            window.location.href = "events.jsp";
-                                        } else {
-                                            $("#errormsg").text('Error: Incorrect data - ' + data.status);
-                                            $("#errormsg").show();
-                                        }
-                                    },
-                                fail:
-                                    function (data) {
-                                        $("#errormsg").text('Error: Incorrect data - ' + data.status);
-                                        $("#errormsg").show();
-                                    }
-                            });
-                            return false;
+                        },
+                    fail:
+                        function (data) {
+                            $("#errormsg").text('Error: Incorrect data - ' + data.status);
+                            $("#errormsg").show();
                         }
                 });
+
             });
         });
     </script>

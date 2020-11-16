@@ -9,11 +9,10 @@
 <html>
 <head>
     <title>News</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <%@include file="header.jsp"%>
 </head>
+<body>
+<%@include file="jumbotron.jsp"%>
 <script>
     $( document ).ready(function () {
         $.ajax({
@@ -31,7 +30,7 @@
                                 $("#testing").append(
                                     "<h2>" + data.title + "</h2>" +
                                     "<b>Content: </b>" + data.content +
-                                    "<br><b>Organiser:</b> " + data2.clubName +
+                                    "<br><b>Organiser:</b> " +'<a href="club.jsp?id='+data2.id+'">'+ data2.clubName + '</a>' +
                                     "<br><b>Publish Date:</b> " + data.publishDate.substring(0,10)
                                 )
                             }
@@ -41,8 +40,6 @@
         });
     });
 </script>
-<body>
-<%@include file="jumbotron.jsp"%>
 <div id="testing"></div>
 <a href="newsUpdate.jsp?id=<%=request.getParameter("id")%>">Update</a>
 <a href="newsDelete.jsp?id=<%=request.getParameter("id")%>">Delete</a>
