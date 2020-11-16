@@ -29,18 +29,34 @@
                         "<h2>" + data.clubName + "</h2>" +
                         "<b>Description: </b>" + data.description
                     )
-                }
-        });
-        $.ajax({
-            url: 'api/news/<%=request.getParameter("id")%>',
-            type: 'GET',
-            contentType: "application/json",
-            success:
-                function (data) {
-                    $("#testing2").append(
-                        "<h3>" + "News: " + data.title + "</h3>" +
-                        "<b>Content: </b>" + data.content
-                    )
+                    $.ajax({
+                        url: 'api/news/club/'+data.id,
+                        type: 'GET',
+                        contentType: "application/json",
+                        success:
+                            function (data2) {
+                                if (data2.length === 0){
+                                    $("#testing2").text("No news");
+                                }
+                                data2.forEach(function (news){
+                                    $("#ol5").append("<li>" + "<a href='news.jsp?id="+news.id+"'>" + news.title + "</a>" + "</li>");
+                                })
+                            }
+                    });
+                    $.ajax({
+                        url: 'api/users/club/'+data.id,
+                        type: 'GET',
+                        contentType: "application/json",
+                        success:
+                            function (data2) {
+                                if (data2.length === 0){
+                                    $("#members").text("No members");
+                                }
+                                data2.forEach(function (user){
+                                    $("#ol4").append("<li>" + "<a href='user.jsp?id="+user.id+"'>" + user.name + " " + user.surname + "</a>" + "</li>");
+                                })
+                            }
+                    });
                 }
         });
     });
@@ -52,19 +68,23 @@
     </div>
     <div class="list">
         <ul class="list-group list-group-horizontal">
-            <li class="list-group-item"><a href="#">Clubs</a></li>
-            <li class="list-group-item"><a href="#">News</a></li>
-            <li class="list-group-item"><a href="#">Events</a></li>
+            <li class="list-group-item"><a href="clubs.jsp">Clubs</a></li>
+            <li class="list-group-item"><a href="allNews.jsp">News</a></li>
+            <li class="list-group-item"><a href="events.jsp">Events</a></li>
             <li class="list-group-item"><a href="#">Users</a></li>
             <input type="button" class="btn btn-dark" id="butn" value="Log Out">
         </ul>
     </div>
 </div>
 <div id="testing"></div>
-<div id="testing2"></div>
+<div id="testing2">
+    <ol id="ol5"></ol>
+</div>
+<div id="members">
+    <ol id="ol4"></ol>
+</div>
 <a href="clubDelete.jsp?id=<%=request.getParameter("id")%>">Delete</a>
 <a href="clubUpdate.jsp?id=<%=request.getParameter("id")%>">Update Club</a>
 <a href="eventAdd.jsp?id=<%=request.getParameter("id")%>">Add Event</a>
-
 </body>
 </html>

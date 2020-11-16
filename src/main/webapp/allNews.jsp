@@ -44,9 +44,9 @@
     </div>
     <div class="list">
         <ul class="list-group list-group-horizontal">
-            <li class="list-group-item"><a href="#">Clubs</a></li>
+            <li class="list-group-item"><a href="clubs.jsp">Clubs</a></li>
             <li class="list-group-item"><a href="allNews.jsp">News</a></li>
-            <li class="list-group-item"><a href="event.jsp">Events</a></li>
+            <li class="list-group-item"><a href="events.jsp">Events</a></li>
             <li class="list-group-item"><a href="#">Users</a></li>
             <input type="button" class="btn btn-dark" id="butn" value="Log Out">
         </ul>

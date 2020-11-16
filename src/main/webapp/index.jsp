@@ -72,7 +72,7 @@
                                     $("#news").text("No news");
                                 }
                                 data3.forEach(function (news){
-                                    $("#ol3").append("<li>" + "<a href='new.jsp?id="+news.id+"'>" + news.title + "</a>" + "</li>");
+                                    $("#ol3").append("<li>" + "<a href='news.jsp?id="+news.id+"'>" + news.title + "</a>" + "</li>");
                                 })
                             }
                     });
@@ -90,7 +90,7 @@
     <div class="list">
     <ul class="list-group list-group-horizontal">
         <li class="list-group-item"><a href="clubs.jsp">Clubs</a></li>
-        <li class="list-group-item"><a href="#">News</a></li>
+        <li class="list-group-item"><a href="allNews.jsp">News</a></li>
         <li class="list-group-item"><a href="events.jsp">Events</a></li>
         <li class="list-group-item"><a href="#">Users</a></li>
         <input type="button" class="btn btn-dark" id="butn" value="Log Out">

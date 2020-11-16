@@ -1,9 +1,8 @@
-<%@ page import="com.myslanty.models.User" %>
-<%@ page import="com.myslanty.models.Club" %><%--
+<%@ page import="com.myslanty.models.User" %><%--
   Created by IntelliJ IDEA.
   User: Sungat Kaparov
-  Date: 15.11.2020
-  Time: 17:58
+  Date: 16.11.2020
+  Time: 18:26
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -12,7 +11,7 @@
     User cur = (User)request.getSession().getAttribute("user");
 %>
 <head>
-    <title>Title</title>
+    <title>Add Club</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -20,38 +19,35 @@
 </head>
 <script>
     $( document ).ready(function () {
-        $("#butn").click(function () {
+        $("#btn").click(function () {
+            clubName = $("#clubName").val();
+            description = $("#description").val();
+            if (clubName === "" || description === ""){
+                $("#errormsg").text('Fill the fields');
+                $("#errormsg").show()
+                return false;
+            }
+            var log = {
+                "clubName": clubName,
+                "description": description,
+            }
             $.ajax({
-                url: 'api/auth',
-                type: 'GET',
+                url: 'api/clubs/',
+                type: 'POST',
+                data: JSON.stringify(log),
                 contentType: "application/json",
                 success:
                     function (data) {
-                        if (data.status === "success") {
-                            window.location.href = "login.jsp";
+                        if (data.name === null || data.description === null){
+                            $("#errormsg").text('Fill the fields' + data.status);
+                            $("#errormsg").show()
+                        }else {
+                            window.location.href = "clubs.jsp";
                         }
-                    }
+                    },
             });
             return false;
         });
-    });
-</script>
-<script>
-    $( document ).ready(function () {
-        $.ajax({
-            url: 'api/clubs/getAll',
-            type: 'GET',
-            contentType: "application/json",
-            success: function (data){
-                if (data === null){
-                    $("#clubs").text("No clubs");
-                }
-                data.forEach(function (club){
-                    $("#ol").append("<li>" + "<a href='club.jsp?id="+club.id+"'>" + club.clubName + "</a>" + "</li>")
-                })
-            }
-        });
-        return false;
     });
 </script>
 <body>
@@ -69,11 +65,17 @@
         </ul>
     </div>
 </div>
-<div id="clubs">
-    <h3>Clubs:</h3>
-    <ol id="ol">
-    </ol>
-    <a href="clubAdd.jsp">Add Club</a>
-</div>
+<form method="post">
+    <span class="error text-danger" id="errormsg" style="display: none"></span>
+    <div class="form-group">
+        <label for="clubName">Club Name:</label><br>
+        <input type="text" name="clubName" class="form-control" id="clubName">
+    </div>
+    <div class="form-group">
+        <label for="description">Club Description:</label><br>
+        <textarea name="description" class="form-control" id="description"> </textarea>
+    </div>
+    <input type="button" class="btn btn-dark" id="btn" value="Add Club">
+</form>
 </body>
 </html>
