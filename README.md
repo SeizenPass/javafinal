@@ -22,7 +22,7 @@
 * **[DELETE]** news/{id} - deleteNews
 * **[POST]** news/ - addNews
 * **[GET]** news/getAll - getAllNews
-* **[PUT]** news/{id} - updateNewsById
+* **[PUT]** news/ - updateNews
 * **[GET]** news/club/{id} - getClubNewsByClubId
 
 ### event-resource
@@ -30,7 +30,7 @@
 * **[DELETE]** events/{id} - deleteEvent
 * **[POST]** events/ - addEvent
 * **[GET]** events/getAll - getAllEvents
-* **[PUT]** events/{id} - updateEventById
+* **[PUT]** events/ - updateEvent
 * **[GET]** events/club/{id} - getClubEventsByClubId
 
 ### auth-resource
