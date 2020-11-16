@@ -16,11 +16,11 @@
     <%@include file="header.jsp"%>
 </head>
 <body>
-<%@include file="jumbotron.jsp"%>
 <%
     int privId = ClubMembershipDB.getInstance().getPrivIdByUserAndClubId(cur.getId(),
             Integer.parseInt(request.getParameter("id")));
 %>
+<%@include file="jumbotron.jsp"%>
 <script>
     $( document ).ready(function () {
         $.ajax({
@@ -30,7 +30,7 @@
             success:
                 function (data) {
                     $("#testing").append(
-                        "<h2>" + data.clubName + "</h2>" +
+                        "<h2 class='display-3'>" + data.clubName + "</h2>" +
                         "<b>Description: </b>" + data.description
                     )
                     $.ajax({
@@ -43,7 +43,7 @@
                                     $("#testing1").text("No events");
                                 }
                                 data2.forEach(function (event){
-                                    $("#ol6").append("<li>" + "<a href='events.jsp?id="+event.id+"'>" + event.eventName + "</a>" + "</li>");
+                                    $("#ol6").append("<li class='list-group-item list-group-item-action'>" + "<a href='events.jsp?id="+event.id+"'>" + event.eventName + "</a>" + "</li>");
                                 })
                             }
                     });
@@ -57,7 +57,7 @@
                                     $("#testing2").text("No news");
                                 }
                                 data2.forEach(function (news){
-                                    $("#ol5").append("<li>" + "<a href='news.jsp?id="+news.id+"'>" + news.title + "</a>" + "</li>");
+                                    $("#ol5").append("<li class='list-group-item list-group-item-action'>" + "<a href='news.jsp?id="+news.id+"'>" + news.title + "</a>" + "</li>");
                                 })
                             }
                     });
@@ -71,7 +71,7 @@
                                     $("#members").text("No members");
                                 }
                                 data2.forEach(function (user){
-                                    $("#ol4").append("<li>" + "<a href='user.jsp?id="+user.id+"'>" + user.name + " " + user.surname + "</a>" + "</li>");
+                                    $("#ol4").append("<li class='list-group-item list-group-item-action'>" + "<a href='user.jsp?id="+user.id+"'>" + user.name + " " + user.surname + "</a>" + "</li>");
                                 })
                             }
                     });
@@ -79,20 +79,38 @@
         });
     });
 </script>
+<center>
 <div id="testing"></div>
-<div id="testing1">
-    <ul id="ol6"></ul>
+</center>
+<div class="row m-3">
+    <div class="list-group col m-3" id="testing1">
+        <ul id="ol6">
+            Events
+        </ul>
+    </div>
+    <div class="list-group col m-3" id="testing2">
+        <ul id="ol5">
+            News
+        </ul>
+    </div>
+    <div class="list-group col m-3" id="members">
+        <ul id="ol4">
+            Members
+        </ul>
+    </div>
 </div>
-<div id="testing2">
-    <ul id="ol5"></ul>
+<%
+    if (cur.getId() == 2){
+%>
+<div class="container">
+<div class="row m-3">
+<a href="clubDelete.jsp?id=<%=request.getParameter("id")%>" class="btn btn-dark m-1 col">Delete</a>
+<a href="clubUpdate.jsp?id=<%=request.getParameter("id")%>" class="btn btn-dark m-1 col">Update Club</a>
+<a href="eventAdd.jsp?id=<%=request.getParameter("id")%>" class="btn btn-dark m-1 col">Add Event</a>
+<a href="newsAdd.jsp?id=<%=request.getParameter("id")%>" class="btn btn-dark m-1 col">Add News</a>
+<%}%>
+<a href="join.jsp?id=<%=request.getParameter("id")%>" class="btn btn-dark m-1 col">Join</a>
 </div>
-<div id="members">
-    <ul id="ol4"></ul>
 </div>
-<a href="clubDelete.jsp?id=<%=request.getParameter("id")%>" class="btn btn-dark">Delete</a>
-<a href="clubUpdate.jsp?id=<%=request.getParameter("id")%>" class="btn btn-dark">Update Club</a>
-<a href="eventAdd.jsp?id=<%=request.getParameter("id")%>" class="btn btn-dark">Add Event</a>
-<a href="newsAdd.jsp?id=<%=request.getParameter("id")%>" class="btn btn-dark">Add News</a>
-<a href="join.jsp?id=<%=request.getParameter("id")%>" class="btn btn-dark">Join</a>
 </body>
 </html>

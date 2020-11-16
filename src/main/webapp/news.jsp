@@ -32,6 +32,7 @@
                                     "<b>Content: </b>" + data.content +
                                     "<br><b>Organiser:</b> " +'<a href="club.jsp?id='+data2.id+'">'+ data2.clubName + '</a>' +
                                     "<br><b>Publish Date:</b> " + data.publishDate.substring(0,10)
+
                                 )
                             }
                     });
@@ -40,8 +41,20 @@
         });
     });
 </script>
-<div id="testing"></div>
-<a href="newsUpdate.jsp?id=<%=request.getParameter("id")%>">Update</a>
-<a href="newsDelete.jsp?id=<%=request.getParameter("id")%>">Delete</a>
+<div class="container">
+<div class="card" style="width: 18rem;">
+    <div class="card-header" id="testing">
+
+    </div>
+</div>
+<%
+    if (cur.getPrivId() == 2){
+%>
+    <div class="row m-3">
+<a href="newsUpdate.jsp?id=<%=request.getParameter("id")%>" class="btn btn-dark m-1 col">Update</a>
+<a href="newsDelete.jsp?id=<%=request.getParameter("id")%>" class="btn btn-dark m-1 col">Delete</a>
+    </div>
+<%}%>
+</div>
 </body>
 </html>

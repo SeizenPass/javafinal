@@ -15,3 +15,21 @@
         </ul>
     </div>
 </div>
+<script>
+    $( document ).ready(function () {
+        $("#butn").click(function () {
+            $.ajax({
+                url: 'api/auth',
+                type: 'GET',
+                contentType: "application/json",
+                success:
+                    function (data) {
+                        if (data.status === "success") {
+                            window.location.href = "login.jsp";
+                        }
+                    }
+            });
+            return false;
+        });
+    });
+</script>
