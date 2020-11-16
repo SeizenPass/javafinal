@@ -47,3 +47,7 @@
 ### group-resource
 * **[GET]** groups/ - getAllGroups
 * **[GET]** groups/{id} - getGroupById
+
+### major-resource
+* **[GET]** majors/ - getAllMajors
+* **[GET]** majors/{id} - getMajorById
