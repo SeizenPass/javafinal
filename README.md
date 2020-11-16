@@ -43,3 +43,11 @@
 * **[GET]** dictionary/content/{id} - getContentPrivilegeById
 * **[GET]** dictionary/user/getAll - getAllUserPrivileges
 * **[GET]** dictionary/user/{id} - getUserPrivilegeById
+
+### group-resource
+* **[GET]** groups/ - getAllGroups
+* **[GET]** groups/{id} - getGroupById
+
+### major-resource
+* **[GET]** majors/ - getAllMajors
+* **[GET]** majors/{id} - getMajorById
