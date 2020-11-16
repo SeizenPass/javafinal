@@ -2,6 +2,7 @@ package com.myslanty.db;
 
 
 import com.myslanty.models.Club;
+import com.myslanty.models.ClubMembership;
 import com.myslanty.models.User;
 
 import java.sql.*;
@@ -88,7 +89,7 @@ public class UserDB {
     public List<Club> getUserClubs(int id) {
         try {
             PreparedStatement ps = cn.prepareStatement("SELECT * FROM clubs " +
-                    "WHERE id = (SELECT club_id FROM clubs_membership WHERE user_id = ?)");
+                    "WHERE id IN (SELECT club_id FROM clubs_membership WHERE user_id = ?)");
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
             return ClubDB.getDBClubs(rs);
@@ -101,7 +102,7 @@ public class UserDB {
     public List<User> getUsersByClubId(int id) {
         try {
             PreparedStatement ps = cn.prepareStatement("SELECT * FROM users " +
-                    "WHERE id = (SELECT user_id FROM clubs_membership WHERE club_id = ?)");
+                    "WHERE id IN (SELECT user_id FROM clubs_membership WHERE club_id = ?)");
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
             return getDBUsers(rs);
