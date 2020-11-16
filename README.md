@@ -1,10 +1,10 @@
-#Team Myslanty from SE-1901
-##The project was done by:
-* ###Amiran Kurman
-* ###Miras Alimov
-* ###Sungat Kaparov
-* ###Beibarys Zholmyrza
-* ###Beknur Raissov
+# Team Myslanty from SE-1901
+## The project was done by:
+* ### Amiran Kurman
+* ### Miras Alimov
+* ### Sungat Kaparov
+* ### Beibarys Zholmyrza
+* ### Beknur Raissov
 
 # APIs
 ### user-resource
