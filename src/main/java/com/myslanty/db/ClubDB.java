@@ -67,6 +67,8 @@ public class ClubDB {
 
     public void deleteClub(int id) {
         clubs.removeIf(c -> c.getId() == id);
+        NewsDB.getInstance().getAllNews().removeIf(c -> c.getClubId() == id);
+        EventDB.getInstance().getAllEvents().removeIf(c -> c.getClubId() == id);
         try {
             PreparedStatement ps = cn.prepareStatement("DELETE FROM clubs " +
                     "WHERE id=?");

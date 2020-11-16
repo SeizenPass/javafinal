@@ -1,18 +1,15 @@
 <%--
   Created by IntelliJ IDEA.
-  User: ASUS
+  User: Sungat Kaparov, Beibarys
   Date: 16.11.2020
-  Time: 14:54
+  Time: 17:10
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>Event</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <%@include file="header.jsp"%>
 </head>
 <script>
     $( document ).ready(function () {
@@ -28,11 +25,11 @@
                         contentType: "application/json",
                         success:
                             function (data2) {
-                                $("#testing").append(
-                                    "<h2>" + data.eventName + "</h2>" +
+                                $("#eventInfo").append(
+                                    "<li><div><h2>" + data.eventName + "</h2>" +
                                     "<b>Description: </b>" + data.description +
                                     "<br><b>Organiser:</b> " + data2.clubName +
-                                    "<br><b>Date:</b> " + data.date.substring(0,10)
+                                    "<br><b>Date:</b> " + data.date.substring(0,10)+ "</div><hr></li>"
                                 )
                             }
                     });
@@ -42,7 +39,7 @@
     });
 </script>
 <body>
-    <div id="testing"></div>
-    <a href="eventDelete.jsp?id=<%=request.getParameter("id")%>">Delete</a>
+    <%@include file="jumbotron.jsp"%>
+    <ul type="none" id="eventInfo"></ul>
 </body>
 </html>
