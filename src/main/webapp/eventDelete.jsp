@@ -11,6 +11,8 @@
     <title>Delete Event</title>
     <%@include file="header.jsp"%>
 </head>
+<body>
+<%@include file="jumbotron.jsp"%>
 <script>
     $( document ).ready(function () {
         $.ajax({
@@ -28,8 +30,6 @@
         });
     });
 </script>
-<body>
-<%@include file="jumbotron.jsp"%>
 <h1 id="msg"></h1>
 </body>
 </html>

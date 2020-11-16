@@ -27,10 +27,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="273db7c4-baa5-439a-95dc-d64214999146" name="Default Changelist" comment="">
+    <list default="true" id="273db7c4-baa5-439a-95dc-d64214999146" name="Default Changelist" comment="upgraded: eventUpdate">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/myslanty/db/UserDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myslanty/db/UserDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/myslanty/services/UserResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myslanty/services/UserResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/event.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/event.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/eventAdd.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/eventAdd.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/eventDelete.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/eventDelete.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/eventUpdate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/eventUpdate.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/events.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/events.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jumbotron.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jumbotron.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,12 +47,22 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -61,7 +78,7 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="1kKRmBSSXlIMu9uHlgsiYWhcumK" />
+  <component name="ProjectId" id="1kKSZgoH3dcoZiFM4ATIErJ6fKP" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -70,19 +87,21 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../assignment8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="SDKs" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9">
+  <component name="RunManager">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -94,7 +113,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tomcat 9" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8.0_231" nameIsGenerated="true">
+    <configuration name="Tomcat 9.0.39" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.39" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="demo1:war">
@@ -104,7 +123,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_demo1_2" />
+        <option name="BASE_DIRECTORY_NAME" value="Tomcat_9_0_39_demo1" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -112,7 +131,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="56278" />
+        <option name="DEBUG_PORT" value="55773" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -166,10 +185,18 @@
         </option>
       </method>
     </configuration>
-    <configuration name="Tomcat 9.0.37" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.37" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8" nameIsGenerated="true">
-      <deployment />
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.39" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/demo1_war/" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="demo1:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/demo1_war" />
+          </settings>
+        </artifact>
+      </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Tomcat_9_0_37_demo1_2" />
+        <option name="BASE_DIRECTORY_NAME" value="_demo1" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -177,7 +204,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="55917" />
+        <option name="DEBUG_PORT" value="55773" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -226,133 +253,97 @@
       </ConfigurationWrapper>
       <method v="2">
         <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="demo1:war" />
+          <artifact name="demo1:war exploded" />
+        </option>
       </method>
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="273db7c4-baa5-439a-95dc-d64214999146" name="Default Changelist" comment="" />
-      <created>1605447453184</created>
+      <changelist id="273db7c4-baa5-439a-95dc-d64214999146" name="Default Changelist" comment="upgraded: eventUpdate" />
+      <created>1605447847180</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1605447453184</updated>
-      <workItem from="1605447454252" duration="13429000" />
-      <workItem from="1605497132827" duration="13482000" />
+      <updated>1605447847180</updated>
+      <workItem from="1605447850765" duration="4011000" />
+      <workItem from="1605496866855" duration="6991000" />
+      <workItem from="1605536079499" duration="270000" />
+      <workItem from="1605538416398" duration="5397000" />
     </task>
-    <task id="LOCAL-00001" summary="some commit2">
-      <created>1605447570318</created>
+    <task id="LOCAL-00001" summary="modified: UserResource - getUserById and getAllUsers">
+      <created>1605448355561</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1605447570318</updated>
+      <updated>1605448355561</updated>
     </task>
-    <task id="LOCAL-00002" summary="added: Auth, Club, User apies">
-      <created>1605452077043</created>
+    <task id="LOCAL-00002" summary="modified: UserResource REST API is ready">
+      <created>1605449525616</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1605452077043</updated>
+      <updated>1605449525616</updated>
     </task>
-    <task id="LOCAL-00003" summary="fixed: login.jsp ajax">
-      <created>1605454984342</created>
+    <task id="LOCAL-00003" summary="added: ClubDB - CRUD for Clubs">
+      <created>1605450924672</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1605454984342</updated>
+      <updated>1605450924672</updated>
     </task>
-    <task id="LOCAL-00004" summary="added: login backend">
-      <created>1605455567502</created>
+    <task id="LOCAL-00004" summary="added: ClubMembershipDB,&#10;updated: ClubResource is finished">
+      <created>1605501373960</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1605455567502</updated>
+      <updated>1605501373960</updated>
     </task>
-    <task id="LOCAL-00005" summary="added: logout backend">
-      <created>1605455710899</created>
+    <task id="LOCAL-00005" summary="fixed: club update">
+      <created>1605505183255</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1605455710899</updated>
+      <updated>1605505183255</updated>
     </task>
-    <task id="LOCAL-00006" summary="added: ClubResource">
-      <created>1605456228321</created>
+    <task id="LOCAL-00006" summary="fixed: userdb bugfix">
+      <created>1605505635864</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1605456228321</updated>
+      <updated>1605505635864</updated>
     </task>
-    <task id="LOCAL-00007" summary="added: NewsResource&#10;modified: New to News">
-      <created>1605460067987</created>
+    <task id="LOCAL-00007" summary="fixed: userdb bugfix&#10;added: EventDB CRUD">
+      <created>1605507372671</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1605460067987</updated>
+      <updated>1605507372671</updated>
     </task>
-    <task id="LOCAL-00008" summary="added: EventResource">
-      <created>1605461036836</created>
+    <task id="LOCAL-00008" summary="added: Event pages">
+      <created>1605526223444</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1605461036836</updated>
+      <updated>1605526223444</updated>
     </task>
-    <task id="LOCAL-00009" summary="implemented: ClubDB REST (doesn't include membership)">
-      <created>1605462908578</created>
+    <task id="LOCAL-00009" summary="added: header and jumbotron&#10;upgraded: Event pages">
+      <created>1605528638513</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1605462908578</updated>
+      <updated>1605528638513</updated>
     </task>
-    <task id="LOCAL-00010" summary="added: Dictionary Support">
-      <created>1605498851267</created>
+    <task id="LOCAL-00010" summary="upgraded: eventUpdate">
+      <created>1605530829747</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1605498851267</updated>
+      <updated>1605530829747</updated>
     </task>
-    <task id="LOCAL-00011" summary="added: DictionaryDB Support And Resource">
-      <created>1605501549617</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1605501549617</updated>
-    </task>
-    <task id="LOCAL-00012" summary="modified: README.md changes">
-      <created>1605501930387</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1605501930387</updated>
-    </task>
-    <task id="LOCAL-00013" summary="added: NewsDB&#10;fixed: ClubDB&#10;updated: README.md">
-      <created>1605506377617</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1605506377617</updated>
-    </task>
-    <task id="LOCAL-00014" summary="updated: README.md">
-      <created>1605507504325</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1605507504325</updated>
-    </task>
-    <task id="LOCAL-00015" summary="implemented: NewsResource">
-      <created>1605507795431</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1605507795431</updated>
-    </task>
-    <task id="LOCAL-00016" summary="updated: README.md">
-      <created>1605510707749</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1605510707749</updated>
-    </task>
-    <option name="localTasksCounter" value="17" />
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,140 +362,106 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="some commit2" />
-    <MESSAGE value="added: Auth, Club, User apies" />
-    <MESSAGE value="fixed: login.jsp ajax" />
-    <MESSAGE value="added: login backend" />
-    <MESSAGE value="added: logout backend" />
-    <MESSAGE value="added: ClubResource" />
-    <MESSAGE value="added: NewsResource&#10;modified: New to News" />
-    <MESSAGE value="added: EventResource" />
-    <MESSAGE value="implemented: ClubDB REST (doesn't include membership)" />
-    <MESSAGE value="added: Dictionary Support" />
-    <MESSAGE value="added: DictionaryDB Support And Resource" />
-    <MESSAGE value="modified: README.md changes" />
-    <MESSAGE value="added: NewsDB&#10;fixed: ClubDB&#10;updated: README.md" />
-    <MESSAGE value="implemented: NewsResource" />
-    <MESSAGE value="updated: README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated: README.md" />
+    <MESSAGE value="modified: UserResource - getUserById and getAllUsers" />
+    <MESSAGE value="modified: UserResource REST API is ready" />
+    <MESSAGE value="added: ClubDB - CRUD for Clubs" />
+    <MESSAGE value="added: ClubMembershipDB,&#10;updated: ClubResource is finished" />
+    <MESSAGE value="fixed: club update" />
+    <MESSAGE value="fixed: userdb bugfix" />
+    <MESSAGE value="fixed: userdb bugfix&#10;added: EventDB CRUD" />
+    <MESSAGE value="added: Event pages" />
+    <MESSAGE value="added: header and jumbotron&#10;upgraded: Event pages" />
+    <MESSAGE value="upgraded: eventUpdate" />
+    <option name="LAST_COMMIT_MESSAGE" value="upgraded: eventUpdate" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="206" y="254" key="#SQL_Dialects" timestamp="1605498425128">
+    <state x="206" y="254" key="#SQL_Dialects" timestamp="1605505930087">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="206" y="254" key="#SQL_Dialects/0.0.1536.824@0.0.1536.824" timestamp="1605498425128" />
+    <state x="206" y="254" key="#SQL_Dialects/0.0.1536.824@0.0.1536.824" timestamp="1605505930087" />
+    <state x="548" y="302" key="#TomEE_Server" timestamp="1605447953812">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
     <state x="548" y="302" key="#TomEE_Server/0.0.1536.824@0.0.1536.824" timestamp="1605447953812" />
-    <state x="547" y="315" key="#Tomcat_Server" timestamp="1605462312208">
+    <state x="223" y="67" width="1089" height="737" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605448052752">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="547" y="315" key="#Tomcat_Server/0.0.1536.824@0.0.1536.824" timestamp="1605462312208" />
-    <state x="223" y="49" width="1089" height="775" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605462317009">
+    <state x="223" y="67" width="1089" height="737" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1605448052752" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605542135374">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="49" width="1089" height="775" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1605462317009" />
-    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser" timestamp="1605497390246">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1605542135374" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1605515569115">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1605497390246" />
-    <state x="450" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1605459475581">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1605515569115" />
+    <state width="1024" height="258" key="GridCell.Tab.0.bottom" timestamp="1605542393921">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="450" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1605459475581" />
-    <state x="327" y="0" key="CommitChangelistDialog2" timestamp="1605510706734">
+    <state width="1024" height="258" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605542393921" />
+    <state width="1024" height="258" key="GridCell.Tab.0.center" timestamp="1605542393921">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="327" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1605510706734" />
-    <state x="81" y="65" width="1228" height="687" key="DiffContextDialog" timestamp="1605460453840">
+    <state width="1024" height="258" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605542393921" />
+    <state width="1024" height="258" key="GridCell.Tab.0.left" timestamp="1605542393920">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="81" y="65" width="1228" height="687" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1605460453840" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1605498413424">
+    <state width="1024" height="258" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605542393920" />
+    <state width="1024" height="258" key="GridCell.Tab.0.right" timestamp="1605542393921">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1605498413424" />
-    <state width="1024" height="200" key="GridCell.Tab.0.bottom" timestamp="1605508221699">
+    <state width="1024" height="258" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605542393921" />
+    <state width="1024" height="258" key="GridCell.Tab.1.bottom" timestamp="1605542393922">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="200" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605508221699" />
-    <state width="1024" height="200" key="GridCell.Tab.0.center" timestamp="1605508221698">
+    <state width="1024" height="258" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605542393922" />
+    <state width="1024" height="258" key="GridCell.Tab.1.center" timestamp="1605542393921">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="200" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605508221698" />
-    <state width="1024" height="200" key="GridCell.Tab.0.left" timestamp="1605508221698">
+    <state width="1024" height="258" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1605542393921" />
+    <state width="1024" height="258" key="GridCell.Tab.1.left" timestamp="1605542393921">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="200" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605508221698" />
-    <state width="1024" height="200" key="GridCell.Tab.0.right" timestamp="1605508221699">
+    <state width="1024" height="258" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1605542393921" />
+    <state width="1024" height="258" key="GridCell.Tab.1.right" timestamp="1605542393921">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="200" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605508221699" />
-    <state width="1024" height="200" key="GridCell.Tab.1.bottom" timestamp="1605508221700">
+    <state width="1024" height="258" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1605542393921" />
+    <state width="1024" height="258" key="GridCell.Tab.2.bottom" timestamp="1605542393923">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="200" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605508221700" />
-    <state width="1024" height="200" key="GridCell.Tab.1.center" timestamp="1605508221699">
+    <state width="1024" height="258" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605542393923" />
+    <state width="1024" height="258" key="GridCell.Tab.2.center" timestamp="1605542393922">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="200" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1605508221699" />
-    <state width="1024" height="200" key="GridCell.Tab.1.left" timestamp="1605508221699">
+    <state width="1024" height="258" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1605542393922" />
+    <state width="1024" height="258" key="GridCell.Tab.2.left" timestamp="1605542393922">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="200" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1605508221699" />
-    <state width="1024" height="200" key="GridCell.Tab.1.right" timestamp="1605508221700">
+    <state width="1024" height="258" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1605542393922" />
+    <state width="1024" height="258" key="GridCell.Tab.2.right" timestamp="1605542393923">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="200" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1605508221700" />
-    <state width="1024" height="200" key="GridCell.Tab.2.bottom" timestamp="1605508221700">
+    <state width="1024" height="258" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1605542393923" />
+    <state width="189" height="457" key="HiddenNamespacesPopup" timestamp="1605499918921">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="200" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605508221700" />
-    <state width="1024" height="200" key="GridCell.Tab.2.center" timestamp="1605508221700">
+    <state width="189" height="457" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1605499918921" />
+    <state x="147" y="65" key="MergeDialog" timestamp="1605526790375">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="200" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1605508221700" />
-    <state width="1024" height="200" key="GridCell.Tab.2.left" timestamp="1605508221700">
+    <state x="147" y="65" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1605526790375" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1605530837726">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="200" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1605508221700" />
-    <state width="1024" height="200" key="GridCell.Tab.2.right" timestamp="1605508221700">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605530837726" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605536175371">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="200" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1605508221700" />
-    <state width="1024" height="210" key="GridCell.Tab.3.bottom" timestamp="1605455058347">
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1605536175371" />
+    <state x="557" y="125" key="git4idea.branch.GitSmartOperationDialog" timestamp="1605526747656">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="210" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605455058347" />
-    <state width="1024" height="210" key="GridCell.Tab.3.center" timestamp="1605455058347">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1024" height="210" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1605455058347" />
-    <state width="1024" height="210" key="GridCell.Tab.3.left" timestamp="1605455058347">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1024" height="210" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1605455058347" />
-    <state width="1024" height="210" key="GridCell.Tab.3.right" timestamp="1605455058347" />
-    <state width="1024" height="210" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1605455058347" />
-    <state x="147" y="65" key="MergeDialog" timestamp="1605510739887">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="147" y="65" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1605510739887" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1605454309908" />
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1605454309908" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1605510709807">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605510709807" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605501796511">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1605501796511" />
-    <state x="478" y="145" width="579" height="534" key="find.popup" timestamp="1605451292621">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="478" y="145" width="579" height="534" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1605451292621" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1605458061317">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1605458061317" />
+    <state x="557" y="125" key="git4idea.branch.GitSmartOperationDialog/0.0.1536.824@0.0.1536.824" timestamp="1605526747656" />
   </component>
 </project>
