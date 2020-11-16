@@ -1,5 +1,7 @@
 package com.myslanty.models;
 
+import java.lang.reflect.Method;
+
 public class User {
     private int id, privId, majorId, groupId, graduationYear;
     private String name, surname, email, password;
@@ -74,5 +76,19 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public User copyWithoutPassword() {
+        User u = new User();
+        u.setId(id);
+        u.setSurname(surname);
+        u.setName(name);
+        u.setPassword("");
+        u.setEmail(email);
+        u.setGraduationYear(graduationYear);
+        u.setGroupId(groupId);
+        u.setMajorId(majorId);
+        u.setPrivId(privId);
+        return u;
     }
 }

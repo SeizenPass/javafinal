@@ -25,7 +25,12 @@ public class UserResource {
     @Path("getAll")
     @Produces(MediaType.APPLICATION_JSON)
     public List<User> getAllUsers() {
-        return UserDB.getInstance().getAllUsers();
+        List<User> userList = UserDB.getInstance().getAllUsers();
+        for (User s:
+             userList) {
+            s = s.copyWithoutPassword();
+        }
+        return userList;
     }
 
     @POST

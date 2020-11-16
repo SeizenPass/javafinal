@@ -39,7 +39,7 @@ public class UserDB {
     public User getUserById(int id) {
         for (User u : users) {
             if (u.getId() == id) {
-                return u;
+                return u.copyWithoutPassword();
             }
         }
         return null;
@@ -106,7 +106,12 @@ public class UserDB {
                     "WHERE id IN (SELECT user_id FROM clubs_membership WHERE club_id = ?)");
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
-            return getDBUsers(rs);
+            List<User> userList = getDBUsers(rs);
+            for (User s:
+                 userList) {
+                s = s.copyWithoutPassword();
+            }
+            return userList;
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -119,6 +124,7 @@ public class UserDB {
         Pattern surnamePattern = Pattern.compile(user.getSurname(), Pattern.CASE_INSENSITIVE);
         Pattern emailPattern = Pattern.compile(user.getEmail(), Pattern.CASE_INSENSITIVE);
         Matcher matcher;
+        User copy;
         for (User u:
              users) {
             if (u.getMajorId() == user.getMajorId() || user.getMajorId() == 0) {
@@ -130,7 +136,8 @@ public class UserDB {
                             if (matcher.find()) {
                                 matcher = surnamePattern.matcher((u.getSurname()));
                                 if (matcher.find()) {
-                                    matchList.add(u);
+                                    copy = u.copyWithoutPassword();
+                                    matchList.add(copy);
                                 }
                             }
                         }
