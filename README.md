@@ -14,7 +14,7 @@
 * **[GET]** users/{id}/getClubs - getUserClubs
 * **[DELETE]** users/{id} - deleteUser
 * **[GET]** users/club/{id} - getUsersByClubId
-* **[GET]** users/find - findUsers
+* **[POST]** users/find - findUsers
 
 ### club-resource
 * **[GET]** clubs/{id} - getClubById
