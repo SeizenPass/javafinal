@@ -47,35 +47,20 @@
                     $("#clubs").text("No clubs");
                 }
                 data.forEach(function (club){
-                    $("#ol").append("<li>" + "<a href='club.jsp?id="+club.id+"'>" + club.clubName + "</a>" + "</li>");
-                    $.ajax({
-                        url: 'api/events/club/'+club.id,
-                        type: 'GET',
-                        contentType: "application/json",
-                        success:
-                            function (data2) {
-                                if (data2 === null){
-                                    $("#events").text("No events");
-                                }
-                                data2.forEach(function (event){
-                                    $("#ol2").append("<li>" + "<a href='event.jsp?id="+event.id+"'>" + event.eventName + "</a>" + "</li>");
-                                })
-                            }
-                    });
-                    $.ajax({
-                        url: 'api/news/club/'+club.id,
-                        type: 'GET',
-                        contentType: "application/json",
-                        success:
-                            function (data3) {
-                                if (data3 === null){
-                                    $("#news").text("No news");
-                                }
-                                data3.forEach(function (news){
-                                    $("#ol3").append("<li>" + "<a href='new.jsp?id="+news.id+"'>" + news.title + "</a>" + "</li>");
-                                })
-                            }
-                    });
+                    $("#ol").append("<li>" + "<a href='club.jsp?id="+club.id+"'>" + club.clubName + "</a>" + "</li>")
+                })
+            }
+        });
+        $.ajax({
+            url: 'api/events/club/<%=cur.getId()%>',
+            type: 'GET',
+            contentType: "application/json",
+            success: function (data){
+                if (data === null){
+                    $("#events").text("No events");
+                }
+                data.forEach(function (event){
+                    $("#ol2").append("<li>" + "<a href='event.jsp?id="+event.id+"'>" + event.eventName + "</a>" + "</li>")
                 })
             }
         });
@@ -88,29 +73,20 @@
         <h1 class="display-4">Welcome <%=cur.getName()%></h1>
     </div>
     <div class="list">
-    <ul class="list-group list-group-horizontal">
-        <li class="list-group-item"><a href="clubs.jsp">Clubs</a></li>
-        <li class="list-group-item"><a href="#">News</a></li>
-        <li class="list-group-item"><a href="#">Events</a></li>
-        <li class="list-group-item"><a href="#">Users</a></li>
-        <input type="button" class="btn btn-dark" id="butn" value="Log Out">
-    </ul>
-</div>
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item"><a href="#">Clubs</a></li>
+            <li class="list-group-item"><a href="#">News</a></li>
+            <li class="list-group-item"><a href="#">Events</a></li>
+            <li class="list-group-item"><a href="#">Users</a></li>
+            <input type="button" class="btn btn-dark" id="butn" value="Log Out">
+        </ul>
+    </div>
 </div>
 <div id="clubs">
     <h3>Clubs:</h3>
     <ol id="ol">
     </ol>
 </div>
-<div id="events">
-    <h3>Events:</h3>
-    <ol id="ol2">
-    </ol>
-</div>
-<div id="news">
-    <h3>News:</h3>
-    <ol id="ol3">
-    </ol>
-</div>
 </body>
 </html>
+
