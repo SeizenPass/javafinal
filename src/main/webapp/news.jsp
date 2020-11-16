@@ -23,15 +23,15 @@
             success:
                 function (data) {
                     $.ajax({
-                        url: 'api/news/'+data.id,
+                        url: 'api/clubs/'+data.clubId,
                         type: 'GET',
                         contentType: "application/json",
                         success:
-                            function (data) {
+                            function (data2) {
                                 $("#testing").append(
                                     "<h2>" + data.title + "</h2>" +
                                     "<b>Content: </b>" + data.content +
-                                    "<br><b>Organiser:</b> " + data.clubName +
+                                    "<br><b>Organiser:</b> " + data2.clubName +
                                     "<br><b>Publish Date:</b> " + data.publishDate.substring(0,10)
                                 )
                             }
@@ -44,6 +44,7 @@
 <body>
 <%@include file="jumbotron.jsp"%>
 <div id="testing"></div>
+<a href="newsUpdate.jsp?id=<%=request.getParameter("id")%>">Update</a>
 <a href="newsDelete.jsp?id=<%=request.getParameter("id")%>">Delete</a>
 </body>
 </html>

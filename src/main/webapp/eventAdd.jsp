@@ -11,46 +11,46 @@
     <title>Add Event</title>
     <%@include file="header.jsp"%>
 </head>
-<script>
-    $( document ).ready(function () {
-        $("#btn").click(function () {
-            eventName = $("#eventName").val();
-            description = $("#description").val();
-            date = $("#date").val();
-            var log = {
-                "id": 0,
-                "clubId": <%=request.getParameter("id")%>,
-                "eventName": eventName,
-                "description": description,
-                "publishDate": null,
-                "date": date
-            }
-            $.ajax({
-                url: 'api/events/',
-                type: 'POST',
-                data: JSON.stringify(log),
-                contentType: "application/json",
-                success:
-                    function (data) {
-                        if (data.status === "success") {
-                            window.location.href = "events.jsp";
-                        } else {
+<body>
+    <%@include file="jumbotron.jsp"%>
+    <script>
+        $( document ).ready(function () {
+            $("#btn").click(function () {
+                eventName = $("#eventName").val();
+                description = $("#description").val();
+                date = $("#date").val();
+                var log = {
+                    "id": 0,
+                    "clubId": <%=request.getParameter("id")%>,
+                    "eventName": eventName,
+                    "description": description,
+                    "publishDate": null,
+                    "date": date
+                }
+                $.ajax({
+                    url: 'api/events/',
+                    type: 'POST',
+                    data: JSON.stringify(log),
+                    contentType: "application/json",
+                    success:
+                        function (data) {
+                            if (data.status === "success") {
+                                window.location.href = "events.jsp";
+                            } else {
+                                $("#errormsg").text('Error: Incorrect data - ' + data.status);
+                                $("#errormsg").show();
+                            }
+                        },
+                    fail:
+                        function (data) {
                             $("#errormsg").text('Error: Incorrect data - ' + data.status);
                             $("#errormsg").show();
                         }
-                    },
-                fail:
-                    function (data) {
-                        $("#errormsg").text('Error: Incorrect data - ' + data.status);
-                        $("#errormsg").show();
-                    }
+                });
+                return false;
             });
-            return false;
         });
-    });
-</script>
-<body>
-    <%@include file="jumbotron.jsp"%>
+    </script>
     <form method="post">
         <span class="error text-danger" id="errormsg" style="display: none"></span>
         <div class="form-group">
