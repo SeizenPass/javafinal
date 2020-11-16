@@ -1,4 +1,8 @@
-<%@ page import="com.myslanty.models.User" %><%--
+<%@ page import="com.myslanty.models.User" %>
+<%@ page import="com.myslanty.db.DictionaryUserPrivilegeDB" %>
+<%@ page import="com.myslanty.db.UserDB" %>
+<%@ page import="com.myslanty.db.ClubDB" %>
+<%@ page import="com.myslanty.db.ClubMembershipDB" %><%--
   Created by IntelliJ IDEA.
   User: Sungat Kaparov, Beibarys
   Date: 16.11.2020
@@ -13,6 +17,10 @@
 </head>
 <body>
 <%@include file="jumbotron.jsp"%>
+<%
+    int privId = ClubMembershipDB.getInstance().getPrivIdByUserAndClubId(cur.getId(),
+            Integer.parseInt(request.getParameter("id")));
+%>
 <script>
     $( document ).ready(function () {
         $.ajax({
