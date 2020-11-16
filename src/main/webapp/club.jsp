@@ -81,9 +81,10 @@
 <div id="members">
     <ul id="ol4"></ul>
 </div>
-<a href="clubDelete.jsp?id=<%=request.getParameter("id")%>" class="btn btn-dark">Delete</a><br>
-<a href="clubUpdate.jsp?id=<%=request.getParameter("id")%>" class="btn btn-dark">Update Club</a><br>
-<a href="eventAdd.jsp?id=<%=request.getParameter("id")%>" class="btn btn-dark">Add Event</a><br>
-<a href="newsAdd.jsp?id=<%=request.getParameter("id")%>" class="btn btn-dark">Add News</a><br>
+<a href="clubDelete.jsp?id=<%=request.getParameter("id")%>" class="btn btn-dark">Delete</a>
+<a href="clubUpdate.jsp?id=<%=request.getParameter("id")%>" class="btn btn-dark">Update Club</a>
+<a href="eventAdd.jsp?id=<%=request.getParameter("id")%>" class="btn btn-dark">Add Event</a>
+<a href="newsAdd.jsp?id=<%=request.getParameter("id")%>" class="btn btn-dark">Add News</a>
+<a href="join.jsp?id=<%=request.getParameter("id")%>" class="btn btn-dark">Join</a>
 </body>
 </html>
