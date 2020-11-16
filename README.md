@@ -36,3 +36,9 @@
 ### auth-resource
 * **[POST]** auth/ - login
 * **[GET]** auth/logout - logout
+
+### dictionary-resource
+* **[GET]** dictionary/content/getAll - getAllContentPrivileges
+* **[GET]** dictionary/content/{id} - getContentPrivilegeById
+* **[GET]** dictionary/user/getAll - getAllUserPrivileges
+* **[GET]** dictionary/user/{id} - getUserPrivilegeById
