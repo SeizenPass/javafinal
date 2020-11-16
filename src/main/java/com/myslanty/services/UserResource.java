@@ -61,4 +61,10 @@ public class UserResource {
     public List<User> getUsersByClubId(@PathParam("id") int id) {
         return UserDB.getInstance().getUsersByClubId(id);
     }
+
+    @GET
+    @Path("find")
+    public List<User> findUsers(User user) {
+        return UserDB.getInstance().findUsers(user);
+    }
 }

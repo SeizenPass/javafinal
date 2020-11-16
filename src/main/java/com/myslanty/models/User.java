@@ -1,7 +1,7 @@
 package com.myslanty.models;
 
 public class User {
-    private int id, priv_id, major_id, group_id, graduation_year;
+    private int id, privId, majorId, groupId, graduationYear;
     private String name, surname, email, password;
 
     public String getPassword() {
@@ -12,12 +12,12 @@ public class User {
         this.password = password;
     }
 
-    public int getGraduation_year() {
-        return graduation_year;
+    public int getGraduationYear() {
+        return graduationYear;
     }
 
-    public void setGraduation_year(int graduation_year) {
-        this.graduation_year = graduation_year;
+    public void setGraduationYear(int graduationYear) {
+        this.graduationYear = graduationYear;
     }
 
     public int getId() {
@@ -28,28 +28,28 @@ public class User {
         this.id = id;
     }
 
-    public int getPriv_id() {
-        return priv_id;
+    public int getPrivId() {
+        return privId;
     }
 
-    public void setPriv_id(int priv_id) {
-        this.priv_id = priv_id;
+    public void setPrivId(int privId) {
+        this.privId = privId;
     }
 
-    public int getMajor_id() {
-        return major_id;
+    public int getMajorId() {
+        return majorId;
     }
 
-    public void setMajor_id(int major_id) {
-        this.major_id = major_id;
+    public void setMajorId(int majorId) {
+        this.majorId = majorId;
     }
 
-    public int getGroup_id() {
-        return group_id;
+    public int getGroupId() {
+        return groupId;
     }
 
-    public void setGroup_id(int group_id) {
-        this.group_id = group_id;
+    public void setGroupId(int groupId) {
+        this.groupId = groupId;
     }
 
     public String getName() {

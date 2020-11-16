@@ -2,12 +2,13 @@ package com.myslanty.db;
 
 
 import com.myslanty.models.Club;
-import com.myslanty.models.ClubMembership;
 import com.myslanty.models.User;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class UserDB {
     public static UserDB userDB = new UserDB();
@@ -53,11 +54,11 @@ public class UserDB {
                     "VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
             ps.setString(1, user.getName());
             ps.setString(2, user.getSurname());
-            ps.setInt(3, user.getPriv_id());
-            ps.setInt(4, user.getMajor_id());
+            ps.setInt(3, user.getPrivId());
+            ps.setInt(4, user.getMajorId());
             ps.setString(5, user.getEmail());
-            ps.setInt(6, user.getGroup_id());
-            ps.setInt(7, user.getGraduation_year());
+            ps.setInt(6, user.getGroupId());
+            ps.setInt(7, user.getGraduationYear());
             ps.setString(8, user.getPassword());
             ps.executeUpdate();
             ps.close();
@@ -111,6 +112,34 @@ public class UserDB {
         }
         return null;
     }
+    
+    public List<User> findUsers(User user) {
+        List<User> matchList = new ArrayList<>();
+        Pattern namePattern = Pattern.compile(user.getName(), Pattern.CASE_INSENSITIVE);
+        Pattern surnamePattern = Pattern.compile(user.getSurname(), Pattern.CASE_INSENSITIVE);
+        Pattern emailPattern = Pattern.compile(user.getEmail(), Pattern.CASE_INSENSITIVE);
+        Matcher matcher;
+        for (User u:
+             users) {
+            if (u.getMajorId() == user.getMajorId() || user.getMajorId() == 0) {
+                if (u.getGroupId() == user.getGroupId() || user.getGroupId() == 0) {
+                    if (u.getGraduationYear() == user.getGraduationYear() || user.getGraduationYear() == 0) {
+                        matcher = emailPattern.matcher(u.getEmail());
+                        if (matcher.find()) {
+                            matcher = namePattern.matcher(u.getName());
+                            if (matcher.find()) {
+                                matcher = surnamePattern.matcher((u.getSurname()));
+                                if (matcher.find()) {
+                                    matchList.add(u);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return matchList;
+    }
 
     protected static List<User> getDBUsers(ResultSet rs) {
         List<User> users = new ArrayList<>();
@@ -121,11 +150,11 @@ public class UserDB {
                 user.setId(rs.getInt(1));
                 user.setName(rs.getString(2));
                 user.setSurname(rs.getString(3));
-                user.setPriv_id(rs.getInt(4));
-                user.setMajor_id(rs.getInt(5));
+                user.setPrivId(rs.getInt(4));
+                user.setMajorId(rs.getInt(5));
                 user.setEmail(rs.getString(6));
-                user.setGroup_id(rs.getInt(7));
-                user.setGraduation_year(rs.getInt(8));
+                user.setGroupId(rs.getInt(7));
+                user.setGraduationYear(rs.getInt(8));
                 user.setPassword(rs.getString(9));
                 users.add(user);
             }
