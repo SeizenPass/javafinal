@@ -1,5 +1,5 @@
 package com.myslanty.models;
-//TODO CHECK IF THIS IS MANDATORY FOR THE PROJECT
+
 public class ClubMembership {
     private int userId, clubId, privId;
 
