@@ -66,11 +66,12 @@ public class UserResource {
     @Produces(MediaType.APPLICATION_JSON)
     public List<User> getUsersByClubId(@PathParam("id") int id) {
         List<User> userList = UserDB.getInstance().getUsersByClubId(id);
+        List<User> out = new ArrayList<>();
         for (User s:
                 userList) {
-            s = s.copyWithoutPassword();
+            out.add(s.copyWithoutPassword());
         }
-        return userList;
+        return out;
     }
 
     @GET

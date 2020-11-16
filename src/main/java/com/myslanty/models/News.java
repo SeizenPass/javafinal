@@ -5,7 +5,7 @@ import java.sql.Timestamp;
 public class News {
     private int id, clubId;
     private String title, content;
-
+    private Timestamp publishDate;
     public int getClubId() {
         return clubId;
     }
@@ -22,7 +22,7 @@ public class News {
         this.publishDate = publishDate;
     }
 
-    private Timestamp publishDate;//TODO check if it is legit for using
+
 
     public int getId() {
         return id;
