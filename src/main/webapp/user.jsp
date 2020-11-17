@@ -31,7 +31,7 @@
                     $("#userInfo").append(
                         "<tr>" +
                         "<td>" + data.id + "</td>" +
-                        "<td>" + data.privId + "<td>" +
+                        "<td>" + data.privId + "</td>" +
                         "<td>" + data.majorId+ "</td>" +
                         "<td>" + data.groupId + "</td>" +
                         "<td>" + data.graduationYear + "</td>" +
