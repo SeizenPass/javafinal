@@ -13,6 +13,17 @@
 </head>
 <script>
     $( document ).ready(function () {
+        $.ajax({
+            url: 'api/clubs/<%=request.getParameter("id")%>/subscription/<%=cur.getId()%>',
+            method: 'GET',
+            success: function (data) {
+                if (!data.hasOwnProperty("privId")) {
+                    location.href = "club.jsp?id=<%=request.getParameter("id")%>"
+                } else if (data.privId < 3 && 2 > <%=cur.getPrivId()%>) {
+                    location.href = "club.jsp?id=<%=request.getParameter("id")%>"
+                }
+            }
+        });
         var clubId
         $.ajax({
             url: 'api/news/<%=request.getParameter("id")%>',
@@ -43,7 +54,7 @@
                 success:
                     function (data) {
                         if (data.status === "success") {
-                            window.location.href = "allNews.jsp";
+                            window.location.href = "news.jsp?id=" + clubId;
                         } else {
                             $("#errormsg").text('Error: Incorrect data - ' + data.status);
                             $("#errormsg").show();

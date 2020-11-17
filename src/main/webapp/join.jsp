@@ -20,7 +20,7 @@
             type: 'POST',
             contentType: "application/json",
             success: function (data) {
-                window.location.href = "index.jsp";
+                window.location.href = "clubs.jsp?id=<%=request.getParameter("id")%>";
             },
         });
         return false;

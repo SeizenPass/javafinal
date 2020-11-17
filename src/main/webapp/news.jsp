@@ -15,6 +15,7 @@
 <%@include file="jumbotron.jsp"%>
 <script>
     $( document ).ready(function () {
+
         $.ajax({
             url: 'api/news/<%=request.getParameter("id")%>',
             type: 'GET',
@@ -34,6 +35,19 @@
                                     "<br><b>Publish Date:</b> " + data.publishDate.substring(0,10)
 
                                 )
+                                $.ajax({
+                                    url: 'api/clubs/'+data2.id+'/subscription/<%=cur.getId()%>',
+                                    method: 'GET',
+                                    success: function (data3) {
+                                        if (!data3.hasOwnProperty("privId")) {
+                                            location.href = "club.jsp?id=<%=request.getParameter("id")%>"
+                                        } else if (data3.privId == 2 && 1 == <%=cur.getPrivId()%>) {
+                                            $("#ourButtons").append('<div class="row m-3">\n' +
+                                                '        <a href="newsUpdate.jsp?id=<%=request.getParameter("id")%>" class="btn btn-dark m-1 col">Update</a>\n' +
+                                                '    </div>')
+                                        }
+                                    }
+                                });
                             }
                     });
 
@@ -41,7 +55,7 @@
         });
     });
 </script>
-<div class="container">
+<div class="container" id="ourButtons">
 <div class="card" style="width: 18rem;">
     <div class="card-header" id="testing">
 

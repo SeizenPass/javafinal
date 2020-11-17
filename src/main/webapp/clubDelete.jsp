@@ -17,6 +17,17 @@
 <script>
     $( document ).ready(function () {
         $.ajax({
+            url: 'api/clubs/<%=request.getParameter("id")%>/subscription/<%=cur.getId()%>',
+            method: 'GET',
+            success: function (data) {
+                if (!data.hasOwnProperty("privId")) {
+                    location.href = "club.jsp?id=<%=request.getParameter("id")%>"
+                } else if (data.privId < 3 && 2 > <%=cur.getPrivId()%>) {
+                    location.href = "club.jsp?id=<%=request.getParameter("id")%>"
+                }
+            }
+        });
+        $.ajax({
             url: 'api/clubs/<%=request.getParameter("id")%>',
             type: 'DELETE',
             contentType: "application/json",

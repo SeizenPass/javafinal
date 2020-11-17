@@ -135,7 +135,7 @@
         </div>
     </div>
     <div class="row">
-        <button type="button" class="btn btn-success" id="search">Search</button>
+        <button type="button" class="btn btn-success col-12" id="search">Search</button>
     </div>
 </div>
 <div class="container" id="users">

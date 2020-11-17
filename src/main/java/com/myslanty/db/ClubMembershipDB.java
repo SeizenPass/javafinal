@@ -2,6 +2,7 @@ package com.myslanty.db;
 
 import com.myslanty.models.Club;
 import com.myslanty.models.ClubMembership;
+import com.myslanty.models.DictionaryContentPrivilege;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -105,13 +106,13 @@ public class ClubMembershipDB {
         return clubMemberships;
     }
 
-    public int getPrivIdByUserAndClubId(int userId, int clubId) {
+    public ClubMembership getPrivIdByUserAndClubId(int userId, int clubId) {
         for (ClubMembership cb:
              clubMemberships) {
             if (cb.getUserId() == userId && clubId == cb.getClubId()) {
-                return cb.getPrivId();
+                return cb;
             }
         }
-        return 0;
+        return null;
     }
 }

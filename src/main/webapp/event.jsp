@@ -34,6 +34,19 @@
                                         "<br><b>Organiser:</b> " +'<a href="club.jsp?id='+data2.id+'">'+ data2.clubName + '</a>' +
                                         "<br><b>Date:</b> " + data.date.substring(0,10)+ "</div><hr></li>"
                                     )
+                                    $.ajax({
+                                        url: 'api/clubs/'+data2.id+'/subscription/<%=cur.getId()%>',
+                                        method: 'GET',
+                                        success: function (data3) {
+                                            if (!data3.hasOwnProperty("privId")) {
+                                                location.href = "club.jsp?id=<%=request.getParameter("id")%>"
+                                            } else if (data3.privId == 2 && 1 == <%=cur.getPrivId()%>) {
+                                                $("body").append('<div class="container">\n' +
+                                                    '    <a href="eventUpdate.jsp?id=<%=request.getParameter("id")%>" class="btn btn-dark">Update</a>\n' +
+                                                    '</div>')
+                                            }
+                                        }
+                                    });
                             }
                         });
                     }

@@ -6,6 +6,8 @@ import com.myslanty.db.ClubDB;
 import com.myslanty.db.ClubMembershipDB;
 import com.myslanty.db.UserDB;
 import com.myslanty.models.Club;
+import com.myslanty.models.ClubMembership;
+import com.myslanty.models.DictionaryContentPrivilege;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -80,5 +82,12 @@ public class ClubResource {
         JsonObject json = new JsonObject();
         json.addProperty("status", "success");
         return new Gson().toJson(json);
+    }
+
+    @GET
+    @Path("{id}/subscription/{userid}")
+    public ClubMembership getPrivilegeByClubIdAndUserId(@PathParam("id") int clubId,
+                                                        @PathParam("userid") int userId) {
+        return ClubMembershipDB.getInstance().getPrivIdByUserAndClubId(userId, clubId);
     }
 }

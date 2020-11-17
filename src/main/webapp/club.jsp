@@ -2,7 +2,8 @@
 <%@ page import="com.myslanty.db.DictionaryUserPrivilegeDB" %>
 <%@ page import="com.myslanty.db.UserDB" %>
 <%@ page import="com.myslanty.db.ClubDB" %>
-<%@ page import="com.myslanty.db.ClubMembershipDB" %><%--
+<%@ page import="com.myslanty.db.ClubMembershipDB" %>
+<%@ page import="com.myslanty.models.ClubMembership" %><%--
   Created by IntelliJ IDEA.
   User: Sungat Kaparov, Beibarys
   Date: 16.11.2020
@@ -17,8 +18,11 @@
 </head>
 <body>
 <%
-    int privId = ClubMembershipDB.getInstance().getPrivIdByUserAndClubId(cur.getId(),
+    ClubMembership clubMembership = ClubMembershipDB.getInstance().getPrivIdByUserAndClubId(cur.getId(),
             Integer.parseInt(request.getParameter("id")));
+    int privId;
+    if (clubMembership == null) privId = 0;
+    else privId = clubMembership.getPrivId();
 %>
 <%@include file="jumbotron.jsp"%>
 <script>
@@ -43,7 +47,7 @@
                                     $("#testing1").text("No events");
                                 }
                                 data2.forEach(function (event){
-                                    $("#ol6").append("<li class='list-group-item list-group-item-action'>" + "<a href='events.jsp?id="+event.id+"'>" + event.eventName + "</a>" + "</li>");
+                                    $("#ol6").append("<li class='list-group-item list-group-item-action'>" + "<a href='event.jsp?id="+event.id+"'>" + event.eventName + "</a>" + "</li>");
                                 })
                             }
                     });
@@ -100,7 +104,7 @@
     </div>
 </div>
 <%
-    if (cur.getId() == 2){
+    if (cur.getPrivId() == 2 || privId == 3){
 %>
 <div class="container">
 <div class="row m-3">
@@ -109,7 +113,9 @@
 <a href="eventAdd.jsp?id=<%=request.getParameter("id")%>" class="btn btn-dark m-1 col">Add Event</a>
 <a href="newsAdd.jsp?id=<%=request.getParameter("id")%>" class="btn btn-dark m-1 col">Add News</a>
 <%}%>
+    <% if (privId == 0) { %>
 <a href="join.jsp?id=<%=request.getParameter("id")%>" class="btn btn-dark m-1 col">Join</a>
+    <% } %>
 </div>
 </div>
 </body>

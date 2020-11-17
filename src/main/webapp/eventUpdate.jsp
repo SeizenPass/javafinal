@@ -15,6 +15,17 @@
     <%@include file="jumbotron.jsp"%>
     <script>
         $( document ).ready(function () {
+            $.ajax({
+                url: 'api/clubs/<%=request.getParameter("id")%>/subscription/<%=cur.getId()%>',
+                method: 'GET',
+                success: function (data) {
+                    if (!data.hasOwnProperty("privId")) {
+                        location.href = "club.jsp?id=<%=request.getParameter("id")%>"
+                    } else if (data.privId < 2 && 2 > <%=cur.getPrivId()%>) {
+                        location.href = "club.jsp?id=<%=request.getParameter("id")%>"
+                    }
+                }
+            });
             var clubId
             $.ajax({
                 url: 'api/events/<%=request.getParameter("id")%>',
@@ -49,7 +60,7 @@
                     success:
                         function (data) {
                             if (data.status === "success") {
-                                window.location.href = "events.jsp";
+                                window.location.href = "club.jsp?id=" + clubId;
                             } else {
                                 $("#errormsg").text('Error: Incorrect data - ' + data.status);
                                 $("#errormsg").show();

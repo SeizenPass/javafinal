@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.myslanty.db.UserDB;
 import com.myslanty.models.Club;
+import com.myslanty.models.DictionaryUserPrivilege;
 import com.myslanty.models.User;
 
 import javax.ws.rs.*;
