@@ -15,6 +15,7 @@
     <%@include file="jumbotron.jsp"%>
     <script>
         $( document ).ready(function () {
+            var clubId;
             $.ajax({
                 url: 'api/events/<%=request.getParameter("id")%>',
                 type: 'GET',
@@ -33,7 +34,7 @@
                                         "<br><b>Organiser:</b> " +'<a href="club.jsp?id='+data2.id+'">'+ data2.clubName + '</a>' +
                                         "<br><b>Date:</b> " + data.date.substring(0,10)+ "</div><hr></li>"
                                     )
-                                }
+                            }
                         });
                     }
             });
@@ -41,10 +42,11 @@
     </script>
     <ul type="none" id="eventInfo"></ul>
     <%
-        if (cur.getPrivId() == 1) {
-    %>
+        if (cur.getPrivId() == 2){
+    %><div class="container">
         <a href="eventUpdate.jsp?id=<%=request.getParameter("id")%>" class="btn btn-dark">Update</a>
         <a href="eventDelete.jsp?id=<%=request.getParameter("id")%>" class="btn btn-dark">Delete</a>
+    </div>
     <%
         }
     %>

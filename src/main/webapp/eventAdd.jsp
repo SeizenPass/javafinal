@@ -51,6 +51,7 @@
             });
         });
     </script>
+    <div class="container">
     <form method="post">
         <span class="error text-danger" id="errormsg" style="display: none"></span>
         <div class="form-group">
@@ -67,5 +68,6 @@
         </div>
         <input type="button" class="btn btn-dark" id="btn" value="Add Event">
     </form>
+    </div>
 </body>
 </html>

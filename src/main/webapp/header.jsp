@@ -1,4 +1,4 @@
-<%--
+<%@ page import="com.myslanty.db.ClubMembershipDB" %><%--
   Created by IntelliJ IDEA.
   User: Beibarys
   Date: 16.11.2020

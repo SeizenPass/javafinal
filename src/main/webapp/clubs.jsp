@@ -43,18 +43,33 @@
                     $("#clubs").text("No clubs");
                 }
                 data.forEach(function (club){
-                    $("#ol").append("<li>" + "<a href='club.jsp?id="+club.id+"'>" + club.clubName + "</a>" + "</li>")
+                    $("#ol").append("<li class='list-group-item'>" + "<a href='club.jsp?id="+club.id+"'>" + club.clubName + "</a>" + "</li>")
                 })
             }
         });
         return false;
     });
 </script>
+<div class="container">
 <div id="clubs">
-    <h3>Clubs:</h3>
-    <ul id="ol">
-    </ul>
-    <a href="clubAdd.jsp">Add Club</a>
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1572949645841-094f3a9c4c94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">Clubs</h5>
+                    <p class="card-text">
+                    <ul id="ol" class="list-group list-group-flush">
+                    </ul>
+                    <a href="clubAdd.jsp" class="btn btn-dark">Add Club</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </div>
 </body>
 </html>
