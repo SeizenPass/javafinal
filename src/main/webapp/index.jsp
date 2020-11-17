@@ -64,7 +64,7 @@
 <div class="container">
     <div class="row">
 <div class="card col m-2" style="width: 18rem;">
-    <img src="https://images.unsplash.com/photo-1522410818928-5522dacd5066?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
+    <img src="https://cheqdin.com/wp-content/uploads/2020/01/Starting-an-Activity-Club-in-the-UK-1-750x524.png" class="card-img-top" alt="...">
     <div class="card-body">
         <h5 class="card-title">Clubs</h5>
         <p class="card-text">Here is listed your joined clubs</p>
@@ -73,7 +73,7 @@
     </ul>
 </div>
 <div class="card col m-2" style="width: 18rem;">
-    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
+    <img src="https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg" class="card-img-top" alt="...">
     <div class="card-body">
         <h5 class="card-title">Events</h5>
         <p class="card-text">Here is listed events of your joined clubs</p>
@@ -82,7 +82,7 @@
     </ul>
 </div>
 <div class="card col m-2" style="width: 18rem;">
-    <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
+    <img src="https://img.freepik.com/free-vector/news-concept-landing-page_52683-18565.jpg?size=626&ext=jpg" class="card-img-top" alt="...">
     <div class="card-body">
         <h5 class="card-title">News</h5>
         <p class="card-text">Here is listed news of your joined clubs</p>

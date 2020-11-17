@@ -55,7 +55,7 @@
     <div class="card mb-3" style="max-width: 540px;">
         <div class="row no-gutters">
             <div class="col-md-4">
-                <img src="https://images.unsplash.com/photo-1572949645841-094f3a9c4c94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img" alt="...">
+                <img src="https://thumbs.dreamstime.com/b/reading-lovers-book-club-reading-lovers-book-club-group-people-giant-books-discussing-students-study-prepare-178228393.jpg" class="card-img" alt="...">
             </div>
             <div class="col-md-8">
                 <div class="card-body">
