@@ -33,7 +33,6 @@
             $("#btn").click(function () {
                 email = $("#email").val();
                 password = $("#password").val();
-                console.log(email + " " + password);
                 var log = {
                     "email": email,
                     "password": password

@@ -16,7 +16,7 @@
 <script>
     $( document ).ready(function () {
         $.ajax({
-            url: 'api/clubs/<%=request.getParameter("id")%>/subscription/<%=cur.getId()%>/<%=cur.getPrivId()%>',
+            url: 'api/clubs/<%=request.getParameter("id")%>/subscription/<%=cur.getId()%>/1',
             type: 'POST',
             contentType: "application/json",
             success: function (data) {
